@@ -97,6 +97,33 @@ class TestCotes(unittest.TestCase):
         self.assertFalse(sels[2].marge_retiree)
 
 
+class TestCalibration(unittest.TestCase):
+    def test_recalage_totaux(self):
+        matchs, sels, proj = [], [], {}
+        for i, (d, e) in enumerate([("BOS", "ORL"), ("NYK", "MIA"), ("LAL", "DEN")]):
+            matchs.append(donnees.Match(str(i), D, d, e))
+            proj[(d, e)] = modele.Projection(ecart=0.0, total=220.0, proba_dom=0.5, pts_dom=110, pts_ext=110)
+            sels += [cotes.Selection(f"{e} @ {d}", "total", "Over 225.5", 1.90),
+                     cotes.Selection(f"{e} @ {d}", "total", "Under 225.5", 1.90)]
+        cotes.analyser(sels, matchs, proj)
+        for p in proj.values():
+            self.assertAlmostEqual(p.total, 225.5, places=3)
+            self.assertAlmostEqual(p.correction_total, 5.5, places=3)
+        self.assertFalse(any(s.value for s in sels))  # biais uniforme => plus de fausse value
+
+    def test_pas_de_recalage_sous_3_matchs(self):
+        m = donnees.Match("1", D, "BOS", "ORL")
+        proj = {("BOS", "ORL"): modele.Projection(ecart=0.0, total=220.0, proba_dom=0.5, pts_dom=110, pts_ext=110)}
+        sels = [cotes.Selection("ORL @ BOS", "total", "Over 225.5", 1.90),
+                cotes.Selection("ORL @ BOS", "total", "Under 225.5", 1.90)]
+        cotes.analyser(sels, [m], proj)
+        self.assertIsNone(proj[("BOS", "ORL")].total_brut)
+
+    def test_probit(self):
+        for p in (0.1, 0.5, 0.73):
+            self.assertAlmostEqual(modele.phi(modele.probit(p)), p, places=6)
+
+
 class TestBilan(unittest.TestCase):
     def test_roi(self):
         with tempfile.TemporaryDirectory() as t:

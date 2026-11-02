@@ -106,6 +106,13 @@ def analyser(date: dt.date, chemin_cotes: Path, verbeux: bool = True):
     sels, err = cotes.lire(chemin_cotes)
     projections = {a.cle: a.proj for a in analyses}
     cotes.analyser(sels, d.matchs, projections)
+    corr = next((p.correction_total for p in projections.values() if p.total_brut is not None), None)
+    if corr is not None:
+        sources.append(f"Totaux recalés de {corr:+.1f} pt sur les lignes du bookmaker "
+                       "(biais moyen du modèle sur les matchs cotés)")
+    elif any(s.marche == "total" for s in sels):
+        avert.append(f"Totaux non recalés : moins de {cotes.MIN_MATCHS_CALIBRATION} matchs avec une ligne de total "
+                     "complète (over + under) — prudence sur les « value » de total.")
     for s in sels:
         if s.match_key is None:
             err.append(f"Cote ignorée « {s.match_brut} / {s.selection} » : {s.note}.")

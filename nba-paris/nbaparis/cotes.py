@@ -20,6 +20,7 @@ from . import equipes as eq
 from . import modele
 
 SEUIL_VALUE = 0.05  # 5 points de pourcentage
+MIN_MATCHS_CALIBRATION = 3  # nb minimum de lignes de total pour recaler les totaux
 
 MARCHES = {
     "vainqueur": "vainqueur", "moneyline": "vainqueur", "ml": "vainqueur", "1x2": "vainqueur",
@@ -143,6 +144,8 @@ def analyser(sels: list[Selection], matchs, projections: dict) -> list[Selection
             for x in g:
                 x.p_sans_marge = x.p_implicite
                 x.note = "marge non retirée (l'autre issue n'est pas dans cotes.csv)"
+    # Recalage des totaux sur le marché (biais moyen du modèle)
+    calibrer_totaux(groupes, projections)
     # Comparaison au modèle
     for s in sels:
         if not s.match_key or s.p_sans_marge is None:
@@ -162,6 +165,45 @@ def analyser(sels: list[Selection], matchs, projections: dict) -> list[Selection
         s.ecart = s.p_modele - s.p_sans_marge
         s.value = s.ecart > SEUIL_VALUE
     return sels
+
+
+def lignes_marche_total(groupes: dict) -> dict:
+    """Ligne principale de total par match : celle dont la proba « over » sans marge
+    est la plus proche de 50 %, corrigée de l'écart à 50 % via la loi du modèle."""
+    candidats: dict = {}
+    for cle, g in groupes.items():
+        if cle[1] != "total" or len(g) != 2:
+            continue
+        over = next((x for x in g if x.over), None)
+        if over is None:
+            continue
+        candidats.setdefault(cle[0], []).append((abs(over.p_sans_marge - 0.5), over))
+    res = {}
+    for match, liste in candidats.items():
+        _, over = min(liste, key=lambda t: t[0])
+        # médiane implicite : ligne + σ × z(p_over)  (p_over > 0,5 ⇒ médiane au-dessus de la ligne)
+        res[match] = over.ligne + modele.ECART_TYPE_TOTAL * modele.probit(over.p_sans_marge)
+    return res
+
+
+def calibrer_totaux(groupes: dict, projections: dict) -> float | None:
+    """Corrige le biais moyen des totaux projetés par rapport au marché.
+
+    Le décalage est le même pour tous les matchs : il ne change pas le classement
+    relatif des matchs, seulement le niveau général de points attendu.
+    """
+    marche = lignes_marche_total(groupes)
+    ecarts = [projections[m].total - l for m, l in marche.items()
+              if m in projections and projections[m].disponible]
+    if len(ecarts) < MIN_MATCHS_CALIBRATION:
+        return None
+    biais = sum(ecarts) / len(ecarts)
+    for p in projections.values():
+        if p.disponible and p.total_brut is None:
+            p.total_brut = p.total
+            p.total = p.total - biais
+            p.correction_total = -biais
+    return biais
 
 
 def libelle(s: Selection) -> str:

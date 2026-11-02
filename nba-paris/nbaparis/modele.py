@@ -36,13 +36,27 @@ METHODE = [
     "Ajustements en points : domicile +2,5 ; back-to-back −1,5 ; 3+ matchs sur les 5 jours précédents −1 ; "
     "voyage > 1 500 km −0,5 ; absences = impact du joueur (on/off NBA, ou BPM +2 de Basketball-Reference) × minutes jouées "
     "(Out 100 %, Doubtful 75 %, Questionable 50 %).",
-    "Probabilités = loi normale centrée sur la projection (écart-type 12 pts pour l'écart, 18 pts pour le total) ; "
+    "Totaux recalés sur le marché (biais moyen du modèle vs lignes du bookmaker, si ≥ 3 matchs cotés) ; "
+    "probabilités = loi normale centrée sur la projection (écart-type 12 pts pour l'écart, 18 pts pour le total) ; "
     "une « value » exige ≥ 5 points de % au-dessus de la probabilité du bookmaker sans marge.",
 ]
 
 
 def phi(x: float) -> float:
     return 0.5 * (1 + math.erf(x / math.sqrt(2)))
+
+
+def probit(p: float) -> float:
+    """Inverse de phi (bissection, précision largement suffisante)."""
+    p = min(max(p, 1e-6), 1 - 1e-6)
+    lo, hi = -10.0, 10.0
+    for _ in range(80):
+        mid = (lo + hi) / 2
+        if phi(mid) < p:
+            lo = mid
+        else:
+            hi = mid
+    return (lo + hi) / 2
 
 
 # --------------------------------------------------------------------------- #
@@ -154,6 +168,8 @@ class Projection:
     ecart: float | None = None          # dom − ext
     total: float | None = None
     proba_dom: float | None = None
+    total_brut: float | None = None      # avant recalage sur le marché
+    correction_total: float = 0.0
     ajustements: list[str] = field(default_factory=list)
     manques: list[str] = field(default_factory=list)
 

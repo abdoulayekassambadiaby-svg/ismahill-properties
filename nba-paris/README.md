@@ -40,7 +40,7 @@ stats.nba.com bloque parfois les IP de serveurs cloud ; depuis une connexion dom
 
 1. Ratings 60 % saison / 40 % 10 derniers, ramenés vers la moyenne de ligue (poids matchs joués / (matchs joués + 10)) ; possessions = pace × pace / pace ligue ; points = possessions × (ORtg + DRtg adverse − ORtg ligue) / 100.
 2. Domicile +2,5 ; back-to-back −1,5 ; 3+ matchs en 5 jours −1 ; voyage > 1 500 km −0,5 ; absents pondérés par leur on/off (Out 100 %, Doubtful 75 %, Questionable 50 %).
-3. Loi normale (σ = 12 pts écart, 18 pts total). Value si proba maison − proba book sans marge > 5 points.
+3. Totaux recalés sur le marché (biais moyen du modèle vs lignes du bookmaker, dès 3 matchs cotés), puis loi normale (σ = 12 pts écart, 18 pts total). Value si proba maison − proba book sans marge > 5 points.
 
 Règles de mise : paris simples uniquement, 3 max, 1 par match, confiance moyenne ou élevée,
 1 à 2 % de bankroll chacun, 5 % maximum sur la soirée. Sans value : ne pas parier.

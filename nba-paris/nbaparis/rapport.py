@@ -227,7 +227,9 @@ def rediger(date: dt.date, analyses: list[AnalyseMatch], sources: list[str], ave
         if p.disponible:
             fav, pf = _favori(a)
             lignes.append(f"- **Projection** — {e} {p.pts_ext:.0f} – {p.pts_dom:.0f} {d} ; favori {fav} à {_pct(pf)}, "
-                          f"spread {_spread(a)}, total {p.total:.1f} ({', '.join(p.ajustements)}"
+                          f"spread {_spread(a)}, total {p.total:.1f}"
+                          f"{f' (brut {p.total_brut:.1f}, recalé {p.correction_total:+.1f})' if p.total_brut is not None else ''}"
+                          f" ({', '.join(p.ajustements)}"
                           f"{'; manque : ' + ', '.join(p.manques) if p.manques else ''})")
         else:
             lignes.append(f"- **Projection** — {ND} (manque : {', '.join(p.manques)})")
