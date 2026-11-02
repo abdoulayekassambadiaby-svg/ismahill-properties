@@ -69,7 +69,7 @@ class TestModele(unittest.TestCase):
         self.assertFalse(p.disponible)
 
     def test_penalite(self):
-        imp = {"x y": {"on": 10, "off": -2, "mj": 7, "min_total": 245}}
+        imp = {"x y": {"v100": 12, "mj": 7, "min_total": 245}}
         pen, _ = modele.penalite_absences([{"joueur": "X Y", "cle": "x y", "statut": "OUT"}], imp, 7)
         self.assertGreater(pen, 0)
         self.assertLessEqual(pen, 6)
@@ -126,7 +126,8 @@ class TestBoutEnBout(unittest.TestCase):
                  {"joueur": "Joueur Fictif", "cle": "joueur fictif", "statut": "QUESTIONABLE", "detail": "", "source": "ESPN"}]}), \
              tempfile.TemporaryDirectory() as t:
             c = Path(t) / "cotes.csv"
-            c.write_text("match,marche,selection,cote\nBOS @ ORL,vainqueur,BOS,1.90\nBOS @ ORL,vainqueur,ORL,1.90\n")
+            donnees._NBA_API["ok"] = True
+            c.write_text("match,marche,selection,cote\nBOS @ ORL,vainqueur,BOS,1.62\nBOS @ ORL,vainqueur,ORL,2.30\n")
             paris.main(["2026-11-02", "--cotes", str(c), "--sortie", t])
             texte = (Path(t) / "paris_2026-11-02.md").read_text()
         self.assertIn("## Récapitulatif", texte)

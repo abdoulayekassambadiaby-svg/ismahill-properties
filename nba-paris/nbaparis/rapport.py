@@ -77,6 +77,15 @@ def _ratings(r):
     return f"ORtg {r['ortg']:.1f} / DRtg {r['drtg']:.1f} / Net {r['net']:+.1f} / pace {r['pace']:.1f}"
 
 
+def _ligne_l10(a, d, e):
+    if a.l10_dom or a.l10_ext:
+        return f"- **Ratings 10 derniers** — {e} : {_ratings(a.l10_ext)} · {d} : {_ratings(a.l10_dom)}"
+    mjs = [r["mj"] for r in (a.r_dom, a.r_ext) if r]
+    if len(mjs) == 2 and max(mjs) <= 10:
+        return f"- **Ratings 10 derniers** — identiques à la saison ({max(mjs)} matchs joués au plus)"
+    return f"- **Ratings 10 derniers** — {ND}"
+
+
 def _fatigue(c: md.Contexte, raisons):
     if c.b2b is None:
         return ND
@@ -208,7 +217,7 @@ def rediger(date: dt.date, analyses: list[AnalyseMatch], sources: list[str], ave
             f"(dom. {_b(a.ctx_dom.bilan_dom)}, 10 derniers {_b(a.ctx_dom.forme10)}"
             f"{', ' + a.ctx_dom.serie if a.ctx_dom.serie else ''})",
             f"- **Ratings saison** — {e} : {_ratings(a.r_ext)} · {d} : {_ratings(a.r_dom)}",
-            f"- **Ratings 10 derniers** — {e} : {_ratings(a.l10_ext)} · {d} : {_ratings(a.l10_dom)}",
+            _ligne_l10(a, d, e),
             f"- **Fatigue** — {e} : {_fatigue(a.ctx_ext, a.fatigue_ext)} · {d} : {_fatigue(a.ctx_dom, a.fatigue_dom)}",
             "- **Confrontations saison** — " + (ND if a.h2h is None else ("aucune" if not a.h2h else
                                                     f"({d}) " + " ; ".join(a.h2h))),

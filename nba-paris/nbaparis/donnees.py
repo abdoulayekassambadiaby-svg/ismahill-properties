@@ -21,6 +21,7 @@ UA = {
     "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
 }
 TIMEOUT = 30
+TIMEOUT_NBA = 20
 
 
 @dataclass
@@ -47,6 +48,21 @@ class Donnees:
     avertissements: list[str] = field(default_factory=list)
 
 
+_NBA_API = {"ok": True}
+
+
+def _appel_nba(fonction, **kwargs):
+    """Appel nba_api ; après un premier échec, stats.nba.com est considéré injoignable
+    pour le reste de l'exécution (évite des dizaines de minutes d'attente)."""
+    if not _NBA_API["ok"]:
+        raise ConnectionError("stats.nba.com injoignable (échec précédent)")
+    try:
+        return _appel(fonction, essais=2, **kwargs)
+    except Exception:
+        _NBA_API["ok"] = False
+        raise
+
+
 def _appel(fonction, *args, essais=3, **kwargs):
     """Appelle une fonction réseau avec quelques tentatives espacées."""
     derniere = None
@@ -67,7 +83,7 @@ def _appel(fonction, *args, essais=3, **kwargs):
 def programme_nba_api(date: dt.date, saison: str) -> list[Match]:
     from nba_api.stats.endpoints import scheduleleaguev2
 
-    rep = _appel(scheduleleaguev2.ScheduleLeagueV2, season=saison, timeout=TIMEOUT)
+    rep = _appel_nba(scheduleleaguev2.ScheduleLeagueV2, season=saison, timeout=TIMEOUT_NBA)
     df = rep.season_games.get_data_frame()
     cible = date.isoformat()
     df = df[df["gameDateEst"].astype(str).str[:10] == cible]
@@ -128,14 +144,13 @@ def journal_nba_api(date: dt.date, saison: str) -> pd.DataFrame:
     from nba_api.stats.endpoints import leaguegamefinder
 
     veille = (date - dt.timedelta(days=1)).strftime("%m/%d/%Y")
-    rep = _appel(
-        leaguegamefinder.LeagueGameFinder,
+    rep = _appel_nba(leaguegamefinder.LeagueGameFinder,
         player_or_team_abbreviation="T",
         season_nullable=saison,
         season_type_nullable="Regular Season",
         league_id_nullable="00",
         date_to_nullable=veille,
-        timeout=TIMEOUT,
+        timeout=TIMEOUT_NBA,
     )
     df = rep.league_game_finder_results.get_data_frame()
     lignes = []
@@ -161,7 +176,12 @@ def journal_bref(date: dt.date) -> pd.DataFrame:
     """Résultats de la saison via les pages mensuelles de Basketball-Reference."""
     annee = eq.annee_bref(date)
     lignes = []
-    for mois in ["october", "november", "december", "january", "february", "march", "april"]:
+    mois_saison = [("october", 10), ("november", 11), ("december", 12), ("january", 1),
+                   ("february", 2), ("march", 3), ("april", 4)]
+    for mois, num in mois_saison:
+        an = annee - 1 if num >= 8 else annee
+        if dt.date(an, num, 1) > date:
+            break
         url = f"https://www.basketball-reference.com/leagues/NBA_{annee}_games-{mois}.html"
         try:
             df = _tables_bref(url, "schedule")
@@ -201,15 +221,14 @@ def ratings_nba_api(date: dt.date, saison: str, derniers: int = 0) -> dict[str, 
     from nba_api.stats.endpoints import leaguedashteamstats
 
     veille = (date - dt.timedelta(days=1)).strftime("%m/%d/%Y")
-    rep = _appel(
-        leaguedashteamstats.LeagueDashTeamStats,
+    rep = _appel_nba(leaguedashteamstats.LeagueDashTeamStats,
         measure_type_detailed_defense="Advanced",
         per_mode_detailed="PerGame",
         season=saison,
         season_type_all_star="Regular Season",
         last_n_games=derniers,
         date_to_nullable=veille,
-        timeout=TIMEOUT,
+        timeout=TIMEOUT_NBA,
     )
     df = rep.league_dash_team_stats.get_data_frame()
     from nba_api.stats.static import teams as st
@@ -268,9 +287,9 @@ def impacts_on_off(sigle_eq: str, date: dt.date, saison: str) -> dict[str, dict]
     if not t:
         return {}
     veille = (date - dt.timedelta(days=1)).strftime("%m/%d/%Y")
-    rep = _appel(teamplayeronoffsummary.TeamPlayerOnOffSummary, team_id=t["id"],
+    rep = _appel_nba(teamplayeronoffsummary.TeamPlayerOnOffSummary, team_id=t["id"],
                  measure_type_detailed_defense="Advanced", season=saison,
-                 date_to_nullable=veille, timeout=TIMEOUT)
+                 date_to_nullable=veille, timeout=TIMEOUT_NBA)
     on = rep.players_on_court_team_player_on_off_summary.get_data_frame()
     off = rep.players_off_court_team_player_on_off_summary.get_data_frame()
     off_net = {int(r["VS_PLAYER_ID"]): float(r["NET_RATING"]) for _, r in off.iterrows()}
@@ -280,9 +299,34 @@ def impacts_on_off(sigle_eq: str, date: dt.date, saison: str) -> dict[str, dict]
         if pid not in off_net:
             continue
         res[nom_joueur(r["VS_PLAYER_NAME"])] = {
-            "nom": r["VS_PLAYER_NAME"], "on": float(r["NET_RATING"]), "off": off_net[pid],
+            "nom": r["VS_PLAYER_NAME"], "v100": float(r["NET_RATING"]) - off_net[pid],
             "mj": int(r["GP"]), "min_total": float(r["MIN"]),
         }
+    return res
+
+
+_CACHE_BREF: dict = {}
+
+
+def impacts_bref(sigle_eq: str, date: dt.date) -> dict[str, dict]:
+    """Secours : Box Plus/Minus (BPM) de Basketball-Reference.
+
+    Valeur pour 100 possessions = BPM − (−2,0), −2,0 étant le niveau « remplaçant »
+    (convention de Basketball-Reference pour la VORP).
+    """
+    if "adv" not in _CACHE_BREF:
+        url = f"https://www.basketball-reference.com/leagues/NBA_{eq.annee_bref(date)}_advanced.html"
+        _CACHE_BREF["adv"] = _tables_bref(url, "advanced")
+    df = _CACHE_BREF["adv"]
+    res = {}
+    for _, r in df.iterrows():
+        if eq.sigle(str(r.get("Team"))) != sigle_eq:
+            continue
+        try:
+            g, mp, bpm = int(r["G"]), float(r["MP"]), float(r["BPM"])
+        except (TypeError, ValueError):
+            continue
+        res[nom_joueur(r["Player"])] = {"nom": r["Player"], "v100": bpm + 2.0, "mj": g, "min_total": mp}
     return res
 
 

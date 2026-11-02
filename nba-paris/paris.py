@@ -46,9 +46,17 @@ def analyser(date: dt.date, chemin_cotes: Path, verbeux: bool = True):
         if s not in cache_onoff:
             try:
                 cache_onoff[s] = donnees.impacts_on_off(s, date, d.saison)
-            except Exception as e:  # noqa: BLE001
-                cache_onoff[s] = None
-                avert.append(f"Impact on/off {s} non disponible ({type(e).__name__}).")
+                src = "Impact des absents : nba_api (on/off)"
+            except Exception:  # noqa: BLE001
+                try:
+                    cache_onoff[s] = donnees.impacts_bref(s, date)
+                    src = "Impact des absents : Basketball-Reference (BPM)"
+                except Exception as e:  # noqa: BLE001
+                    cache_onoff[s] = None
+                    src = None
+                    avert.append(f"Impact des absents {s} non disponible ({type(e).__name__}).")
+            if src and src not in sources:
+                sources.append(src)
         return cache_onoff[s]
 
     analyses = []
@@ -81,8 +89,9 @@ def analyser(date: dt.date, chemin_cotes: Path, verbeux: bool = True):
                             and i["min_total"] / i["mj"] >= 20:
                         incertains_cles += 1
 
-        r_dom = modele.melange(d.ratings_saison.get(dom), d.ratings_l10.get(dom))
-        r_ext = modele.melange(d.ratings_saison.get(ext), d.ratings_l10.get(ext))
+        mj = lambda s: (d.ratings_saison.get(s) or {}).get("mj")  # noqa: E731
+        r_dom = modele.regresser(modele.melange(d.ratings_saison.get(dom), d.ratings_l10.get(dom)), ligue, mj(dom))
+        r_ext = modele.regresser(modele.melange(d.ratings_saison.get(ext), d.ratings_l10.get(ext)), ligue, mj(ext))
         proj = modele.projeter(r_dom, r_ext, ligue, f_dom, f_ext, pen.get(dom), pen.get(ext))
         mjs = [x.get("mj") for x in (d.ratings_saison.get(dom), d.ratings_saison.get(ext)) if x]
         conf, raisons = modele.confiance(

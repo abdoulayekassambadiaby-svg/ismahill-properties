@@ -27,12 +27,15 @@ ECART_TYPE_MARGE = 12.0
 ECART_TYPE_TOTAL = 18.0
 POIDS_STATUT = {"OUT": 1.0, "DOUBTFUL": 0.75, "QUESTIONABLE": 0.5, "PROBABLE": 0.0}
 PLAFOND_ABSENCES = 10.0
+MATCHS_REGRESSION = 10    # poids de la moyenne de ligue, en « matchs fictifs »
 
 METHODE = [
-    "Ratings mélangés 60 % saison / 40 % 10 derniers matchs ; possessions = pace dom. × pace ext. / pace ligue ; "
+    "Ratings mélangés 60 % saison / 40 % 10 derniers matchs, puis ramenés vers la moyenne de la ligue "
+    "(poids = matchs joués / (matchs joués + 10), utile en début de saison) ; possessions = pace dom. × pace ext. / pace ligue ; "
     "points = possessions × (ORtg équipe + DRtg adverse − ORtg ligue) / 100.",
     "Ajustements en points : domicile +2,5 ; back-to-back −1,5 ; 3+ matchs sur les 5 jours précédents −1 ; "
-    "voyage > 1 500 km −0,5 ; absences = impact on/off du joueur × minutes jouées (Out 100 %, Doubtful 75 %, Questionable 50 %).",
+    "voyage > 1 500 km −0,5 ; absences = impact du joueur (on/off NBA, ou BPM +2 de Basketball-Reference) × minutes jouées "
+    "(Out 100 %, Doubtful 75 %, Questionable 50 %).",
     "Probabilités = loi normale centrée sur la projection (écart-type 12 pts pour l'écart, 18 pts pour le total) ; "
     "une « value » exige ≥ 5 points de % au-dessus de la probabilité du bookmaker sans marge.",
 ]
@@ -134,7 +137,7 @@ def penalite_absences(blesses: list[dict], impacts: dict[str, dict] | None, mj_e
         mpm = imp["min_total"] / imp["mj"]
         fiabilite = imp["min_total"] / (imp["min_total"] + 400)   # rétrécit les petits échantillons
         dispo = min(1.0, imp["mj"] / mj_equipe)                    # absence déjà subie = déjà dans les ratings
-        valeur = max(0.0, (imp["on"] - imp["off"]) * mpm / 48 * fiabilite * dispo)
+        valeur = max(0.0, imp["v100"] * mpm / 48 * fiabilite * dispo)
         valeur = min(valeur, 6.0)
         total += valeur * poids
         details.append(f"{b['joueur']} : {valeur:.1f} pt × {poids:.0%}")
@@ -165,6 +168,16 @@ def melange(saison: dict | None, l10: dict | None) -> dict | None:
     if not l10:
         return dict(saison)
     return {k: POIDS_SAISON * saison[k] + POIDS_L10 * l10[k] for k in ("ortg", "drtg", "net", "pace")}
+
+
+def regresser(r: dict | None, ligue: dict | None, mj: int | None) -> dict | None:
+    """Ramène un rating vers la moyenne de la ligue selon la taille de l'échantillon."""
+    if not r or not ligue or not mj:
+        return r
+    w = mj / (mj + MATCHS_REGRESSION)
+    o = ligue["ortg"] + (r["ortg"] - ligue["ortg"]) * w
+    d = ligue["ortg"] + (r["drtg"] - ligue["ortg"]) * w
+    return {"ortg": o, "drtg": d, "net": o - d, "pace": ligue["pace"] + (r["pace"] - ligue["pace"]) * w}
 
 
 def projeter(r_dom: dict | None, r_ext: dict | None, ligue: dict | None,
@@ -234,7 +247,7 @@ def confiance(proj: Projection, ctx_dom: Contexte, ctx_ext: Contexte, mj_min: in
     if incertains_cles:
         niveau -= 1
         raisons.append(f"{incertains_cles} joueur(s) important(s) incertain(s)")
-    if not l10_ok:
+    if not l10_ok and not (mj_min is not None and mj_min <= 10):  # ≤ 10 matchs : 10 derniers = saison
         niveau -= 1
         raisons.append("ratings sur 10 matchs non disponibles")
     return {2: "élevé", 1: "moyen"}.get(niveau, "faible"), raisons or ["données complètes"]

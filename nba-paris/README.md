@@ -38,7 +38,7 @@ stats.nba.com bloque parfois les IP de serveurs cloud ; depuis une connexion dom
 
 ## Méthode (voir `nbaparis/modele.py`, tous les paramètres sont en tête de fichier)
 
-1. Ratings 60 % saison / 40 % 10 derniers ; possessions = pace × pace / pace ligue ; points = possessions × (ORtg + DRtg adverse − ORtg ligue) / 100.
+1. Ratings 60 % saison / 40 % 10 derniers, ramenés vers la moyenne de ligue (poids matchs joués / (matchs joués + 10)) ; possessions = pace × pace / pace ligue ; points = possessions × (ORtg + DRtg adverse − ORtg ligue) / 100.
 2. Domicile +2,5 ; back-to-back −1,5 ; 3+ matchs en 5 jours −1 ; voyage > 1 500 km −0,5 ; absents pondérés par leur on/off (Out 100 %, Doubtful 75 %, Questionable 50 %).
 3. Loi normale (σ = 12 pts écart, 18 pts total). Value si proba maison − proba book sans marge > 5 points.
 
