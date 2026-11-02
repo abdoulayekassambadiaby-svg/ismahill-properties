@@ -1,0 +1,8 @@
+# EXEMPLE FICTIF : cotes inventées pour montrer le format, à ne pas utiliser
+match,marche,selection,cote
+Celtics @ Magic,vainqueur,Celtics,1.85
+Celtics @ Magic,vainqueur,Magic,1.98
+Celtics @ Magic,handicap,Celtics -1.5,1.90
+Celtics @ Magic,handicap,Magic +1.5,1.90
+Celtics @ Magic,total,Over 220.5,1.90
+Celtics @ Magic,total,Under 220.5,1.90
