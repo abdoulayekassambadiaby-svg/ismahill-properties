@@ -9,11 +9,13 @@ Collection de précis universitaires — **droit ivoirien, droit OHADA et droit 
 | `pdf/00_Document-cadre_de_la_collection.pdf` | Architecture de la collection, chartes scientifique, de fiabilité et éditoriale, plans détaillés des 12 tomes | Version 1.1 |
 | `pdf/Tome-01_Theorie-generale-et-fondements-du-droit.pdf` | Tome 1 — Théorie générale et fondements du droit (12 chapitres) | Version 1.1 |
 | `pdf/Tome-02_Methodologie-juridique-et-langage-du-juriste.pdf` | Tome 2 — Méthodologie juridique et langage du juriste (15 chapitres) | Version 1.0 |
+| `pdf/Tome-03_Droit-constitutionnel.pdf` | Tome 3 — Droit constitutionnel (17 chapitres) | Version 1.0 |
 
-Les tomes 3 à 12 sont planifiés dans le document-cadre et seront rédigés progressivement (prochain tome : Tome 3, Droit constitutionnel).
+Les tomes 4 à 12 sont planifiés dans le document-cadre et seront rédigés progressivement (prochain tome : Tome 4, Droit administratif).
 
 ## Journal des versions
 
+- **Tome 3, version 1.0** — théorie de l'État et de la Constitution, régimes politiques, droit constitutionnel ivoirien, droits fondamentaux, droit électoral, internationalisation ; texte consolidé de la Constitution non consulté directement (références recoupées, voir la fiche de vérification).
 - **Tome 2, version 1.0** — rédaction complète : langage du droit, raisonnement juridique, exercices juridiques, recherche et rédaction professionnelle.
 - **Tome 1, version 1.1** — signalement de la révision de l'AUPSRVE (acte révisé du 17 octobre 2023, en vigueur le 16 février 2024) aux chapitres 1, 6 et 12 et dans la fiche de vérification ; correction de la mise en page de la liste des abréviations ; quatrième de couverture placée en page paire.
 - **Document-cadre, version 1.1** — mise à jour de l'état d'avancement ; signalement de la révision de l'AUPSRVE dans le plan du Tome 6.
@@ -30,7 +32,8 @@ precis-juridique/
 ├── sources/
 │   ├── 00-document-cadre/  sources Markdown du document-cadre
 │   ├── tome-01/            sources Markdown du Tome 1
-│   └── tome-02/            sources Markdown du Tome 2
+│   ├── tome-02/            sources Markdown du Tome 2
+│   └── tome-03/            sources Markdown du Tome 3
 └── pdf/                    volumes composés
 ```
 

@@ -142,7 +142,7 @@ Le droit constitutionnel est le droit de l'**encadrement juridique du pouvoir po
 
 Le Tome 3 s'appuie sur le Tome 1 (hiérarchie des normes) et précède le Tome 4, avec lequel il ne se confond pas : le droit constitutionnel traite de l'attribution et de la limitation du pouvoir politique, le droit administratif de l'action administrative et de son contrôle. Orientation : F. Hamon et M. Troper, *Droit constitutionnel* ; L. Favoreu et al., *Droit constitutionnel* ; F. Wodié, *Institutions politiques et droit constitutionnel en Côte d'Ivoire* ; G. Conac (dir.), *Les Cours suprêmes en Afrique* ; K. Mbaye, *Les droits de l'homme en Afrique*.
 
-**État : planifié — prochain tome à rédiger.**
+**État : rédigé (version 1.0, novembre 2026), en dix-sept chapitres.**
 
 # Droit administratif {.chapitre num="Tome 4" court="Tome 4 — Droit administratif"}
 
@@ -191,7 +191,7 @@ Le droit administratif est le droit de l'**action administrative et de son contr
 
 Le Tome 4 suppose le Tome 1 (légalité, hiérarchie des normes) et le Tome 3 (organisation des pouvoirs publics). Il prépare le Tome 8 (procédure administrative contentieuse) et le Tome 11 (domanialité, expropriation). Orientation : R. Chapus, *Droit administratif général* ; J. Waline, *Droit administratif* ; M. Long, P. Weil, G. Braibant, P. Delvolvé et B. Genevois, *Les grands arrêts de la jurisprudence administrative* ; doctrine administrativiste ivoirienne et africaine (à recenser).
 
-**État : planifié.**
+**État : planifié — prochain tome à rédiger.**
 
 # Droit civil {.chapitre num="Tome 5" court="Tome 5 — Droit civil"}
 
