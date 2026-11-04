@@ -1,0 +1,363 @@
+/* =====================================================================
+   Feuille de style de la collection
+   « Précis de formation juridique approfondie »
+   Rendu : WeasyPrint (CSS Paged Media). Format : 170 × 240 mm.
+   ===================================================================== */
+
+/* ---------- Polices (SIL Open Font License) ---------- */
+@font-face { font-family: "EB Garamond"; font-style: normal; font-weight: 400; src: url(polices/eb-garamond-latin-400-normal.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "EB Garamond"; font-style: normal; font-weight: 400; src: url(polices/eb-garamond-latin-ext-400-normal.woff2) format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "EB Garamond"; font-style: normal; font-weight: 400; src: url(polices/eb-garamond-greek-400-normal.woff2) format("woff2"); unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF, U+1F00-1FFF; }
+@font-face { font-family: "EB Garamond"; font-style: italic; font-weight: 400; src: url(polices/eb-garamond-latin-400-italic.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "EB Garamond"; font-style: italic; font-weight: 400; src: url(polices/eb-garamond-latin-ext-400-italic.woff2) format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "EB Garamond"; font-style: italic; font-weight: 400; src: url(polices/eb-garamond-greek-400-italic.woff2) format("woff2"); unicode-range: U+0370-03FF, U+1F00-1FFF; }
+@font-face { font-family: "EB Garamond"; font-style: normal; font-weight: 500; src: url(polices/eb-garamond-latin-500-normal.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC, U+2122, U+2212; }
+@font-face { font-family: "EB Garamond"; font-style: normal; font-weight: 500; src: url(polices/eb-garamond-latin-ext-500-normal.woff2) format("woff2"); unicode-range: U+0100-02BA, U+1E00-1E9F, U+A720-A7FF; }
+@font-face { font-family: "EB Garamond"; font-style: italic; font-weight: 500; src: url(polices/eb-garamond-latin-500-italic.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC, U+2122, U+2212; }
+@font-face { font-family: "EB Garamond"; font-style: normal; font-weight: 600; src: url(polices/eb-garamond-latin-600-normal.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC, U+2122, U+2212; }
+@font-face { font-family: "EB Garamond"; font-style: normal; font-weight: 600; src: url(polices/eb-garamond-latin-ext-600-normal.woff2) format("woff2"); unicode-range: U+0100-02BA, U+1E00-1E9F, U+A720-A7FF; }
+@font-face { font-family: "EB Garamond"; font-style: italic; font-weight: 600; src: url(polices/eb-garamond-latin-600-italic.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC, U+2122, U+2212; }
+@font-face { font-family: "EB Garamond"; font-style: normal; font-weight: 700; src: url(polices/eb-garamond-latin-700-normal.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC, U+2122, U+2212; }
+@font-face { font-family: "EB Garamond"; font-style: normal; font-weight: 700; src: url(polices/eb-garamond-latin-ext-700-normal.woff2) format("woff2"); unicode-range: U+0100-02BA, U+1E00-1E9F, U+A720-A7FF; }
+@font-face { font-family: "EB Garamond"; font-style: italic; font-weight: 700; src: url(polices/eb-garamond-latin-700-italic.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC, U+2122, U+2212; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 400; src: url(polices/cormorant-garamond-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 400; src: url(polices/cormorant-garamond-latin-400-italic.woff2) format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 500; src: url(polices/cormorant-garamond-latin-500-normal.woff2) format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 500; src: url(polices/cormorant-garamond-latin-500-italic.woff2) format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 600; src: url(polices/cormorant-garamond-latin-600-normal.woff2) format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 600; src: url(polices/cormorant-garamond-latin-600-italic.woff2) format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 700; src: url(polices/cormorant-garamond-latin-700-normal.woff2) format("woff2"); }
+
+@font-face { font-family: "Source Sans 3"; font-style: normal; font-weight: 400; src: url(polices/source-sans-3-latin-400-normal.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC, U+2122, U+2212; }
+@font-face { font-family: "Source Sans 3"; font-style: normal; font-weight: 400; src: url(polices/source-sans-3-latin-ext-400-normal.woff2) format("woff2"); unicode-range: U+0100-02BA, U+1E00-1E9F, U+A720-A7FF; }
+@font-face { font-family: "Source Sans 3"; font-style: italic; font-weight: 400; src: url(polices/source-sans-3-latin-400-italic.woff2) format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-style: normal; font-weight: 600; src: url(polices/source-sans-3-latin-600-normal.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC, U+2122, U+2212; }
+@font-face { font-family: "Source Sans 3"; font-style: normal; font-weight: 600; src: url(polices/source-sans-3-latin-ext-600-normal.woff2) format("woff2"); unicode-range: U+0100-02BA, U+1E00-1E9F, U+A720-A7FF; }
+@font-face { font-family: "Source Sans 3"; font-style: italic; font-weight: 600; src: url(polices/source-sans-3-latin-600-italic.woff2) format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-style: normal; font-weight: 700; src: url(polices/source-sans-3-latin-700-normal.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC, U+2122, U+2212; }
+@font-face { font-family: "Source Sans 3"; font-style: normal; font-weight: 700; src: url(polices/source-sans-3-latin-ext-700-normal.woff2) format("woff2"); unicode-range: U+0100-02BA, U+1E00-1E9F, U+A720-A7FF; }
+
+/* ---------- Palette ---------- */
+:root {
+  --encre: #1f1e1b;
+  --gris: #5e5a52;
+  --filet: #c9bfa6;
+  --or: #a8842c;
+  --or-clair: #e9dcb4;
+  --marine: #13294b;
+  --vert: #0f6b3a;
+  --orange: #e07000;
+  --violet: #5b3a74;
+  --rouge: #9b2c2c;
+  --papier: #fbf9f3;
+  --accent: var(--marine);       /* redéfini par tome */
+}
+
+/* ---------- Pages ---------- */
+@page {
+  size: 170mm 240mm;
+  margin: 21mm 18mm 22mm 20mm;
+  @bottom-center {
+    content: counter(page);
+    font-family: "EB Garamond", serif; font-size: 9.5pt; color: var(--gris);
+    vertical-align: top; padding-top: 4mm;
+  }
+  @footnote {
+    border-top: 0.4pt solid var(--filet);
+    padding-top: 2mm;
+    margin-top: 4mm;
+  }
+}
+@page :left {
+  margin-left: 18mm; margin-right: 20mm;
+  @top-left {
+    content: string(volume, first-except);
+    font-family: "EB Garamond", serif; font-style: italic; font-size: 8.6pt; color: var(--gris);
+    vertical-align: bottom; padding-bottom: 3.5mm;
+  }
+}
+@page :right {
+  margin-left: 20mm; margin-right: 18mm;
+  @top-right {
+    content: string(chapitre, first-except);
+    font-family: "EB Garamond", serif; font-style: italic; font-size: 8.6pt; color: var(--gris);
+    vertical-align: bottom; padding-bottom: 3.5mm;
+  }
+}
+@page couverture {
+  margin: 0;
+  background: var(--fond-couverture, #13294b);
+  @top-left { content: none; } @top-right { content: none; }
+  @bottom-center { content: none; }
+}
+@page liminaire {
+  @top-left { content: none; } @top-right { content: none; }
+  @bottom-center { content: none; }
+}
+@page partie {
+  @top-left { content: none; } @top-right { content: none; }
+  @bottom-center { content: none; }
+}
+@page :blank {
+  @top-left { content: none; } @top-right { content: none; }
+  @bottom-center { content: none; }
+}
+
+/* ---------- Base typographique ---------- */
+html { font-family: "EB Garamond", serif; font-size: 10.6pt; color: var(--encre); }
+body { margin: 0; line-height: 1.38; font-variant-numeric: oldstyle-nums proportional-nums; hyphenate-character: "-"; hyphenate-limit-chars: 6 3 2; }
+p { margin: 0 0 0.42em 0; text-align: justify; hyphens: auto; orphans: 2; widows: 2; text-indent: 0; }
+p + p { text-indent: 1.1em; }
+em { font-style: italic; }
+strong { font-weight: 600; }
+a { color: inherit; text-decoration: none; }
+sup, sub { font-size: 70%; line-height: 0; }
+.pc { font-variant: small-caps; letter-spacing: 0.02em; }
+abbr, .sc { font-variant: small-caps; }
+blockquote {
+  margin: 0.6em 1.4em 0.8em 1.4em; padding: 0; font-size: 0.97em; color: #33312c;
+}
+blockquote p { text-indent: 0 !important; }
+blockquote p:last-child { margin-bottom: 0; }
+hr { border: none; border-top: 0.4pt solid var(--filet); margin: 1em 25%; }
+ul, ol { margin: 0.2em 0 0.55em 0; padding-left: 1.35em; }
+li { margin: 0.12em 0; text-align: justify; hyphens: auto; }
+li p { text-indent: 0 !important; margin-bottom: 0.15em; }
+ul { list-style-type: "– "; }
+ul ul { list-style-type: "· "; }
+code { font-family: "Source Sans 3", sans-serif; font-size: 0.9em; }
+
+/* Ancrages du titre courant */
+.volume-titre-courant { string-set: volume content(text); height: 0; overflow: hidden; margin: 0; font-size: 0; }
+
+/* ---------- Titres ---------- */
+h1, h2, h3, h4, h5 { break-after: avoid; hyphens: manual; text-align: left; font-variant-numeric: lining-nums; }
+
+h1 {
+  string-set: chapitre attr(data-court), volume attr(data-volume);
+  font-family: "Cormorant Garamond", serif; font-weight: 600;
+  font-size: 22pt; line-height: 1.12; color: var(--accent);
+  margin: 0 0 1.1em 0; break-before: page;
+}
+/* Titre de niveau 1 « simple » (introduction, bibliographie, annexes) */
+h1.simple, h1.liminaire-titre { break-before: page; }
+
+/* Parties : page de titre pleine */
+h1.partie {
+  page: partie; break-before: right; break-after: page;
+  text-align: center; font-size: 25pt; line-height: 1.15;
+  padding-top: 52mm; margin: 0; color: var(--accent);
+}
+h1.partie::before {
+  content: attr(data-num);
+  display: block; font-family: "Source Sans 3", sans-serif; font-weight: 600;
+  font-size: 9pt; letter-spacing: 0.32em; text-transform: uppercase; color: var(--or);
+  margin-bottom: 9mm;
+}
+h1.partie::after {
+  content: ""; display: block; width: 28mm; margin: 10mm auto 0 auto;
+  border-top: 1.2pt solid var(--or);
+}
+
+/* Chapitres */
+h1.chapitre { padding-top: 14mm; }
+h1.chapitre::before {
+  content: attr(data-num);
+  display: block; font-family: "Source Sans 3", sans-serif; font-weight: 600;
+  font-size: 8.6pt; letter-spacing: 0.3em; text-transform: uppercase; color: var(--or);
+  margin-bottom: 4.5mm;
+}
+h1.chapitre::after {
+  content: ""; display: block; width: 22mm; margin-top: 6mm; border-top: 1.1pt solid var(--or);
+}
+
+h2 {
+  font-family: "EB Garamond", serif; font-weight: 600; font-size: 13.2pt; line-height: 1.22;
+  color: var(--accent); margin: 1.45em 0 0.55em 0; padding-bottom: 1.2mm;
+  border-bottom: 0.5pt solid var(--filet);
+}
+h3 {
+  font-family: "EB Garamond", serif; font-weight: 600; font-size: 11.4pt; line-height: 1.25;
+  color: #2a2a2a; margin: 1.15em 0 0.4em 0;
+}
+h4 {
+  font-family: "EB Garamond", serif; font-weight: 500; font-style: italic; font-size: 10.9pt;
+  color: #2a2a2a; margin: 0.95em 0 0.3em 0;
+}
+h5 {
+  font-family: "Source Sans 3", sans-serif; font-weight: 600; font-size: 8.8pt; letter-spacing: 0.04em;
+  text-transform: uppercase; color: var(--gris); margin: 0.85em 0 0.25em 0;
+}
+h2 + p, h3 + p, h4 + p, h5 + p, .encadre + p, figure + p, table + p, ul + p, ol + p, blockquote + p { text-indent: 0; }
+
+/* ---------- Notes de bas de page ---------- */
+.fn {
+  float: footnote;
+  font-size: 8.4pt; line-height: 1.28; text-align: justify; hyphens: auto;
+  font-style: normal; font-weight: 400; color: #2b2a27; text-indent: 0;
+}
+.fn::footnote-call {
+  content: counter(footnote);
+  font-size: 66%; vertical-align: super; line-height: 0; font-variant-numeric: lining-nums;
+  padding-left: 0.04em; color: var(--accent);
+}
+.fn::footnote-marker {
+  content: counter(footnote) ". ";
+  font-variant-numeric: lining-nums; color: var(--accent);
+}
+h1.chapitre, h1.simple, h1.partie { counter-reset: footnote; }
+
+/* ---------- Badges de statut des énoncés ---------- */
+.dp, .jp, .doc, .pp, .abr, .ver, .mod {
+  font-family: "Source Sans 3", sans-serif; font-weight: 700; font-size: 6.6pt; letter-spacing: 0.06em;
+  padding: 0.25mm 1.1mm 0.15mm 1.1mm; border-radius: 1mm; color: white; vertical-align: 0.12em;
+  white-space: nowrap; font-style: normal; text-indent: 0;
+}
+.dp { background: var(--vert); }
+.jp { background: var(--marine); }
+.doc { background: var(--violet); }
+.pp { background: var(--orange); }
+.abr { background: var(--rouge); }
+.mod { background: #7a6a3a; }
+.ver { background: #b7791f; }
+
+/* ---------- Encadrés ---------- */
+.encadre, .definition, .retenir, .comparaison, .vigilance, .methode, .jurisprudence, .debat, .cas, .proposition, .texte, .synthese, .questions, .plan {
+  margin: 0.9em 0 1em 0; padding: 2.6mm 3.6mm 2.4mm 3.6mm;
+  border-left: 2.2pt solid var(--accent); background: #f6f4ee;
+  font-size: 0.95em; line-height: 1.34; border-radius: 0 1.2mm 1.2mm 0;
+}
+.definition p, .retenir p, .comparaison p, .vigilance p, .methode p, .jurisprudence p, .debat p, .cas p, .proposition p, .texte p, .synthese p, .questions p, .plan p { text-indent: 0 !important; margin-bottom: 0.35em; }
+.definition::before, .retenir::before, .comparaison::before, .vigilance::before, .methode::before, .jurisprudence::before, .debat::before, .cas::before, .proposition::before, .texte::before, .synthese::before, .questions::before, .plan::before {
+  display: block; font-family: "Source Sans 3", sans-serif; font-weight: 700; font-size: 7.4pt;
+  letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 1.4mm;
+}
+.definition { background: #f7f1e1; border-left-color: var(--or); break-inside: avoid; }
+.definition::before { content: "Définition — " attr(data-titre); color: #7d6020; }
+.retenir { background: #edf2f8; border-left-color: var(--marine); break-inside: avoid; }
+.retenir::before { content: "À retenir"; color: var(--marine); }
+.retenir[data-titre]::before { content: "À retenir — " attr(data-titre); }
+.comparaison { background: #eaf4ee; border-left-color: var(--vert); }
+.comparaison::before { content: "Droit comparé — " attr(data-titre); color: var(--vert); }
+.vigilance { background: #fdf2e3; border-left-color: var(--orange); break-inside: avoid; }
+.vigilance::before { content: "État du droit — point de vigilance"; color: #a24f00; }
+.vigilance[data-titre]::before { content: "État du droit — " attr(data-titre); }
+.methode { background: #eef0f6; border-left-color: #3b4a7a; }
+.methode::before { content: "Méthode — " attr(data-titre); color: #3b4a7a; }
+.jurisprudence { background: #f4f2ed; border-left-color: #6b5b3e; }
+.jurisprudence::before { content: "Jurisprudence — " attr(data-titre); color: #6b5b3e; letter-spacing: 0.06em; text-transform: none; font-size: 8.4pt; }
+.debat { background: #f3eef6; border-left-color: var(--violet); }
+.debat::before { content: "Débat doctrinal — " attr(data-titre); color: var(--violet); }
+.proposition { background: #fff6ec; border-left-color: var(--orange); }
+.proposition::before { content: "Proposition de l'auteur — " attr(data-titre); color: #a24f00; }
+.texte { background: #f7f6f2; border-left-color: #8a8270; }
+.texte::before { content: "Texte — " attr(data-titre); color: #5e5a52; letter-spacing: 0.06em; text-transform: none; font-size: 8.4pt; }
+.cas { background: #fbfaf6; border: 0.5pt solid var(--filet); border-left: 2.2pt solid var(--accent); }
+.cas::before { content: attr(data-titre); color: var(--accent); letter-spacing: 0.05em; text-transform: none; font-size: 9.2pt; }
+.corrige { margin-top: 2mm; padding: 2mm 3mm; background: white; border: 0.4pt dashed var(--filet); }
+.corrige::before { content: "Corrigé"; display: block; font-family: "Source Sans 3", sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: 0.16em; text-transform: uppercase; color: var(--vert); margin-bottom: 1.2mm; }
+.corrige p { text-indent: 0 !important; }
+.synthese { background: #eef3f8; border-left-color: var(--marine); }
+.synthese::before { content: "Synthèse — connaissances essentielles"; color: var(--marine); }
+.questions { background: #f6f4ee; border-left-color: var(--or); }
+.questions::before { content: "Questions d'évaluation"; color: #7d6020; }
+.plan { background: transparent; border-left: 0.8pt solid var(--or); font-size: 0.93em; }
+.plan::before { content: "Plan du chapitre"; color: #7d6020; }
+.encadre ul, .definition ul, .retenir ul, .comparaison ul, .vigilance ul, .methode ul, .jurisprudence ul, .debat ul, .cas ul, .synthese ul, .questions ul, .questions ol, .plan ul { margin-top: 0.1em; margin-bottom: 0.3em; }
+
+/* ---------- Tableaux ---------- */
+table {
+  width: 100%; border-collapse: collapse; margin: 0.9em 0 1.1em 0;
+  font-family: "Source Sans 3", sans-serif; font-size: 7.9pt; line-height: 1.3;
+  font-variant-numeric: lining-nums;
+}
+caption {
+  caption-side: top; text-align: left; font-family: "EB Garamond", serif; font-style: italic;
+  font-size: 9.6pt; color: var(--gris); padding-bottom: 1.5mm;
+}
+thead th {
+  background: var(--accent); color: white; font-weight: 600; text-align: left;
+  padding: 1.5mm 1.8mm; border: 0.4pt solid var(--accent); vertical-align: bottom;
+}
+tbody td { padding: 1.3mm 1.8mm; border: 0.4pt solid #d8d1bf; vertical-align: top; text-align: left; hyphens: auto; }
+tbody tr:nth-child(even) td { background: #f7f5ef; }
+tbody td:first-child { font-weight: 600; color: #2b2a27; }
+table.libre tbody td:first-child { font-weight: 400; }
+tr { break-inside: avoid; }
+
+/* ---------- Figures et schémas ---------- */
+figure { margin: 1em 0 1.1em 0; break-inside: avoid; text-align: center; }
+figure svg { max-width: 100%; height: auto; }
+figcaption {
+  font-family: "EB Garamond", serif; font-style: italic; font-size: 9.4pt; color: var(--gris);
+  margin-top: 1.6mm; text-align: center;
+}
+
+/* ---------- Bibliographies ---------- */
+.biblio p, .biblio li { text-indent: -1.2em; padding-left: 1.2em; text-align: left; hyphens: manual; font-size: 0.95em; }
+.biblio ul { list-style: none; padding-left: 0; }
+.biblio p + p { text-indent: -1.2em; }
+
+/* ---------- Pages liminaires ---------- */
+.liminaire { page: liminaire; break-before: page; }
+.page-titre { page: liminaire; break-before: page; text-align: center; padding-top: 22mm; }
+.page-titre .pt-collection { font-family: "Source Sans 3", sans-serif; font-weight: 600; font-size: 8pt; letter-spacing: 0.3em; text-transform: uppercase; color: var(--or); }
+.page-titre .pt-sous { font-style: italic; color: var(--gris); margin-top: 2mm; font-size: 10pt; }
+.page-titre .pt-tome { margin-top: 26mm; font-family: "Cormorant Garamond", serif; font-size: 15pt; letter-spacing: 0.2em; color: var(--gris); }
+.page-titre .pt-titre { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 27pt; line-height: 1.1; color: var(--accent); margin-top: 5mm; }
+.page-titre .pt-soustitre { font-style: italic; font-size: 12pt; color: #3a3833; margin-top: 5mm; }
+.page-titre .pt-filet { width: 26mm; margin: 12mm auto; border-top: 1pt solid var(--or); }
+.page-titre .pt-mention { font-size: 9.6pt; color: var(--gris); line-height: 1.5; }
+.page-titre .pt-edition { margin-top: 36mm; font-family: "Source Sans 3", sans-serif; font-size: 8pt; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gris); }
+
+.verso { page: liminaire; break-before: page; font-size: 8.8pt; line-height: 1.38; color: #3a3833; padding-top: 70mm; }
+.verso p { text-indent: 0 !important; margin-bottom: 0.6em; text-align: justify; }
+.verso h4 { font-style: normal; font-family: "Source Sans 3", sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gris); margin-top: 0; }
+
+/* ---------- Sommaire et table des matières ---------- */
+.sommaire, .tdm { page: liminaire; break-before: right; }
+.sommaire h1, .tdm h1 { page: liminaire; break-before: avoid; string-set: none; }
+.toc-entree { display: block; text-align: left; hyphens: manual; }
+.toc-entree a::after { content: leader(". ") target-counter(attr(href), page); font-variant-numeric: lining-nums; }
+.toc-partie { margin: 4mm 0 1.6mm 0; font-family: "Source Sans 3", sans-serif; font-weight: 700; font-size: 8.4pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.toc-chapitre { margin: 2.2mm 0 0.6mm 0; font-weight: 600; font-size: 10.2pt; }
+.toc-simple { margin: 2.2mm 0 0.6mm 0; font-weight: 600; font-size: 10.2pt; }
+.toc-h2 { margin: 0.2mm 0 0 5mm; font-size: 9.3pt; color: #33312c; }
+.toc-h3 { margin: 0 0 0 10mm; font-size: 8.7pt; color: var(--gris); }
+.toc-num { color: var(--or); font-family: "Source Sans 3", sans-serif; font-weight: 700; font-size: 7.6pt; letter-spacing: 0.08em; text-transform: uppercase; margin-right: 1.5mm; }
+
+/* ---------- Couverture ---------- */
+.couverture {
+  page: couverture; position: relative; width: 170mm; height: 240mm; overflow: hidden;
+  color: #f5efe0; break-after: page;
+}
+.couverture .cv-fond { position: absolute; left: 0; top: 0; width: 170mm; height: 240mm; }
+.couverture .cv-bloc { position: absolute; left: 16mm; right: 16mm; }
+.couverture .cv-collection { top: 21mm; font-family: "Source Sans 3", sans-serif; font-weight: 600; font-size: 8.3pt; letter-spacing: 0.34em; text-transform: uppercase; color: var(--or-cv, #d9bd6a); }
+.couverture .cv-sous { top: 27.5mm; font-family: "EB Garamond", serif; font-style: italic; font-size: 10.5pt; color: #e8e0cc; }
+.couverture .cv-tome { top: 92mm; font-family: "Cormorant Garamond", serif; font-weight: 500; font-size: 15pt; letter-spacing: 0.32em; color: var(--or-cv, #d9bd6a); }
+.couverture .cv-titre { top: 102mm; font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 30pt; line-height: 1.06; color: #fbf7ec; }
+.couverture .cv-soustitre { font-family: "EB Garamond", serif; font-style: italic; font-size: 11.5pt; color: #e8e0cc; line-height: 1.35; }
+.couverture .cv-pied { bottom: 15mm; font-family: "Source Sans 3", sans-serif; font-size: 7.6pt; letter-spacing: 0.22em; text-transform: uppercase; color: #d8cfb8; }
+.couverture .cv-pied span { color: var(--or-cv, #d9bd6a); }
+
+/* ---------- Quatrième de couverture ---------- */
+.quatrieme { page: couverture; break-before: page; position: relative; width: 170mm; height: 240mm; overflow: hidden; color: #f2ecdc; }
+.quatrieme .q-texte { position: absolute; left: 20mm; right: 20mm; top: 34mm; font-size: 10.2pt; line-height: 1.45; }
+.quatrieme .q-texte p { text-indent: 0 !important; margin-bottom: 0.7em; text-align: justify; }
+.quatrieme .q-texte h4 { font-family: "Source Sans 3", sans-serif; font-style: normal; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; font-size: 8pt; color: var(--or-cv, #d9bd6a); margin: 0 0 4mm 0; }
+
+/* ---------- Divers ---------- */
+.centre { text-align: center; }
+.petit { font-size: 0.9em; }
+.signature { text-align: right; font-style: italic; margin-top: 1em; }
+.saut { break-before: page; }
+.nobreak { break-inside: avoid; }
+.epigraphe { margin: 0 0 7mm 30%; font-style: italic; font-size: 9.6pt; color: #3a3833; text-align: right; }
+.epigraphe p { text-align: right; text-indent: 0 !important; }
+dl { margin: 0.4em 0; }
+dt { font-weight: 600; break-after: avoid; }
+dd { margin: 0 0 0.35em 1.4em; }
+.sigles dt { float: left; width: 22mm; font-weight: 600; font-variant: small-caps; }
+.sigles dd { margin-left: 24mm; }

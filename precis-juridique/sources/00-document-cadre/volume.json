@@ -1,0 +1,26 @@
+{
+  "fichier_pdf": "00_Document-cadre_de_la_collection.pdf",
+  "collection": "Précis de formation juridique approfondie",
+  "sous_collection": "Droit ivoirien · Droit OHADA · Droit comparé",
+  "tome": "Document-cadre",
+  "titre": "Architecture et chartes de la collection",
+  "sous_titre": "Exigences scientifiques, protocole de fiabilité, charte éditoriale et plans des douze tomes",
+  "titre_courant": "Document-cadre de la collection",
+  "edition": "Version 1.0 · novembre 2026",
+  "mention_titre": "Document d'orientation — il ne se substitue pas aux tomes rédigés",
+  "date_iso": "2026-11-04",
+  "couleurs": {"fond": "#2a2620", "fond2": "#16130f", "accent": "#5a4a2a", "or": "#d6b866"},
+  "verso": "verso.md",
+  "liminaires": ["00-sigles.md"],
+  "fichiers": [
+    "01-presentation.md",
+    "02-charte-scientifique.md",
+    "03-charte-fiabilite.md",
+    "04-charte-editoriale.md",
+    "05-architecture.md",
+    "06-programme-et-bibliographie.md"
+  ],
+  "quatrieme": "q4.md",
+  "profondeur_sommaire": 2,
+  "profondeur_tdm": 3
+}
