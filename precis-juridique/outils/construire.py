@@ -63,6 +63,11 @@ def _typo_texte(t: str) -> str:
     t = re.sub(r"\b(n°|nos?|art\.|al\.|p\.|pp\.|t\.|vol\.|fasc\.|ch\.|chap\.|§|ss\.|spéc\.|coll\.|éd\.)[ ]+(?=[\w\d])", lambda m: m.group(1) + NBSP, t)
     t = re.sub(r"(\d)[ ](%|F CFA|FCFA|francs|ans|jours|mois|heures)", r"\1" + NBSP + r"\2", t)
     t = re.sub(r"\b(M\.|Mme|Mlle|Me|MM\.)[ ]+", lambda m: m.group(1) + NBSP, t)
+    # Ordinaux en exposant : 1er, 1re, 2e, 3es ; XIXe siècle, Ve République.
+    t = re.sub(r"(?<![\w.\-/])(\d{1,3})(er|re|res|e|es)(?![\w])",
+               lambda m: f"{m.group(1)}<sup>{m.group(2)}</sup>", t)
+    t = re.sub(r"(?<![\w])([IVX]{1,5})(e|er)(?=[  ](siècle|République|millénaire|législature|Congrès|arrondissement))",
+               lambda m: f"{m.group(1)}<sup>{m.group(2)}</sup>", t)
     return t
 
 
