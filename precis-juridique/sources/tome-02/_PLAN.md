@@ -17,3 +17,13 @@ Partie I — Le langage du droit : 1 vocabulaire ; 2 adages et latin ; 3 légist
 Partie II — Le raisonnement juridique : 4 syllogisme et qualification ; 5 interprétation ; 6 argumentation ; 7 fictions, présomptions, standards.
 Partie III — Les exercices juridiques : 8 fiche et commentaire d'arrêt ; 9 dissertation ; 10 cas pratique et consultation ; 11 commentaire de texte et note de synthèse ; 12 oral.
 Partie IV — La recherche et l'écriture : 13 documentation ; 14 mémoire et thèse ; 15 rédaction professionnelle.
+
+## Références recoupées pour le chapitre 15 et les annexes (session du 4 novembre 2026, suite)
+- AUS (15 déc. 2010), art. 14 : signature des deux parties ; mention manuscrite de la somme maximale garantie en lettres et en chiffres ; en cas de différence, la somme en lettres prévaut — Recoupé (nature de la sanction discutée).
+- CCJA, 25 avril 2014, SPEN c. BAN (Ohadata J-15-168) — Recoupé (numéro à confirmer).
+- AUA (Conakry, 23 nov. 2017), art. 3-1 (définitions clause compromissoire / compromis) — Recoupé (lettre à confirmer) ; Règlement d'arbitrage CCJA du 23 nov. 2017 — Recoupé ; Traité OHADA, art. 21 — Recoupé.
+- Règlement de procédure CCJA, art. 28 bis (révision 2014) : cas d'ouverture limitatifs, dont vices de motivation — Recoupé (numérotation à confirmer).
+- AUPSRVE révisé : adopté le 17 oct. 2023, JO OHADA 15 nov. 2023, en vigueur 16 févr. 2024 ; nouvel art. 30 et art. 30-1 — Recoupé (lettre à confirmer). Incidence sur le Tome 1 : corrigé en v1.1.
+- Loi n° 2013-546 du 30 juillet 2013 ; décret n° 2014-106 du 12 mars 2014 — Recoupé.
+- CPC fr. art. 455, 458, 768 — Recoupé ; Cons. const. 2017-694 QPC — Recoupé ; CEDH Hadjianastassiou (12945/87), Taxquet GC (926/05) — Recoupé ; Eisemann 1974 — Recoupé.
+- Loi des 16-24 août 1790 / loi du 20 avril 1810 (motivation) — À confirmer.

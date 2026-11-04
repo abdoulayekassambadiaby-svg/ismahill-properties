@@ -41,7 +41,7 @@ Le Tome 1 répond à la question préalable à toute étude juridique : qu'est-c
 
 Le Tome 1 fournit les notions générales utilisées par tous les autres tomes. Orientation : J. Carbonnier, *Flexible droit* ; F. Terré, *Introduction générale au droit* ; G. Cornu, *Droit civil. Introduction au droit* ; H. Kelsen, *Théorie pure du droit* ; H. L. A. Hart, *Le concept de droit* ; R. David et C. Jauffret-Spinosi, *Les grands systèmes de droit contemporains* ; É. Le Roy, *Le jeu des lois*.
 
-**État : rédigé (version 1.0, novembre 2026).**
+**État : rédigé (version 1.1, novembre 2026).**
 
 # Méthodologie juridique et langage du juriste {.chapitre num="Tome 2" court="Tome 2 — Méthodologie juridique"}
 
@@ -72,7 +72,7 @@ Le droit est un langage et un raisonnement. Le Tome 2 enseigne à **qualifier, i
 - Chapitre 11 — Le commentaire de texte et la note de synthèse
 - Chapitre 12 — L'oral juridique : exposé, grand oral, plaidoirie
 
-**Quatrième partie — La recherche et l'écriture scientifique**
+**Quatrième partie — La recherche et l'écriture juridiques**
 
 - Chapitre 13 — La documentation juridique : sources officielles, bases de données, recueils ; citer ses sources
 - Chapitre 14 — Le mémoire et la thèse : problématique, hypothèse, plan, revue de littérature, éthique et plagiat
@@ -88,7 +88,7 @@ Le droit est un langage et un raisonnement. Le Tome 2 enseigne à **qualifier, i
 
 Le Tome 2 est l'instrument de tous les autres. Il prend appui sur le Tome 1 (sources et interprétation) et fournit les méthodes d'exercices utilisées dans les cas pratiques et sujets de la collection. Orientation : J.-L. Bergel, *Méthodologie juridique* ; Ch. Perelman, *Logique juridique. Nouvelle rhétorique* ; F. Gény, *Méthode d'interprétation et sources en droit privé positif* ; G. Cornu, *Linguistique juridique* ; H. Roland et L. Boyer, *Adages du droit français*.
 
-**État : planifié — prochain tome à rédiger.**
+**État : rédigé (version 1.0, novembre 2026), en quinze chapitres.**
 
 # Droit constitutionnel {.chapitre num="Tome 3" court="Tome 3 — Droit constitutionnel"}
 
@@ -142,7 +142,7 @@ Le droit constitutionnel est le droit de l'**encadrement juridique du pouvoir po
 
 Le Tome 3 s'appuie sur le Tome 1 (hiérarchie des normes) et précède le Tome 4, avec lequel il ne se confond pas : le droit constitutionnel traite de l'attribution et de la limitation du pouvoir politique, le droit administratif de l'action administrative et de son contrôle. Orientation : F. Hamon et M. Troper, *Droit constitutionnel* ; L. Favoreu et al., *Droit constitutionnel* ; F. Wodié, *Institutions politiques et droit constitutionnel en Côte d'Ivoire* ; G. Conac (dir.), *Les Cours suprêmes en Afrique* ; K. Mbaye, *Les droits de l'homme en Afrique*.
 
-**État : planifié.**
+**État : planifié — prochain tome à rédiger.**
 
 # Droit administratif {.chapitre num="Tome 4" court="Tome 4 — Droit administratif"}
 
@@ -258,7 +258,7 @@ Le droit des affaires est le droit de l'**activité économique organisée**. So
 
 **Quatrième partie — Le droit des sûretés** (Acte uniforme révisé le 15 décembre 2010).
 
-**Cinquième partie — Le recouvrement des créances et les voies d'exécution** (Acte uniforme du 10 avril 1998) : injonction de payer, injonction de délivrer ou de restituer, saisies.
+**Cinquième partie — Le recouvrement des créances et les voies d'exécution** (Acte uniforme du 10 avril 1998, remplacé par l'acte révisé du 17 octobre 2023, en vigueur le 16 février 2024) : injonction de payer, injonction de délivrer ou de restituer, saisies.
 
 **Sixième partie — Les procédures collectives** (Acte uniforme du 10 septembre 2015) : conciliation, règlement préventif, redressement judiciaire, liquidation des biens, procédures simplifiées.
 
@@ -268,7 +268,7 @@ Le droit des affaires est le droit de l'**activité économique organisée**. So
 
 ## Sources, institutions et problématiques
 
-**Jurisprudence structurante.** Jurisprudence de la CCJA (recueils et base Ohadata), notamment sur la répartition des compétences entre la CCJA et les juridictions nationales de cassation, l'immunité d'exécution des personnes publiques (CCJA, arrêt n° 043/2005 du 7 juillet 2005, *Aziablévi Yovo et autres c. Société Togo Télécom*) et le contrôle des sentences arbitrales.
+**Jurisprudence structurante.** Jurisprudence de la CCJA (recueils et base Ohadata), notamment sur la répartition des compétences entre la CCJA et les juridictions nationales de cassation, l'immunité d'exécution des personnes publiques (CCJA, arrêt n° 043/2005 du 7 juillet 2005, *Aziablévi Yovo et autres c. Société Togo Télécom*, rendu sous l'acte de 1998 ; nouvel article 30 de l'acte révisé de 2023) et le contrôle des sentences arbitrales.
 
 **Problématiques structurantes.** La portée de la supranationalité ; les conflits de compétence entre la CCJA et les cours nationales ; l'appropriation du droit OHADA par le secteur informel (statut de l'entreprenant) ; l'efficacité des procédures collectives ; le droit pénal des affaires et la répartition des compétences entre le législateur OHADA et les législateurs nationaux.
 

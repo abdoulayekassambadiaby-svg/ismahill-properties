@@ -12,4 +12,4 @@ La collection est élaborée avec l'assistance d'un système d'intelligence arti
 
 #### Date
 
-Document établi le 4 novembre 2026. Version 1.0.
+Document établi le 4 novembre 2026. Version 1.1 : mise à jour de l'état d'avancement (Tome 2 rédigé) et signalement de la révision de l'AUPSRVE (acte révisé du 17 octobre 2023).

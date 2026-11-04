@@ -84,12 +84,13 @@ L'accès direct aux bases officielles en ligne (Journal officiel, CIVLII, site d
 |---|---|---|---|
 | Traité OHADA (Port-Louis, 1993 ; Québec, 2008), art. 1er, 5, 9, 10, 13 à 20, 42 | Objet ; sanctions pénales ; entrée en vigueur ; supranationalité ; CCJA ; langues | Recoupé | 1, 5, 6, 7, 8, 10 |
 | CCJA, avis n° 001/2001/EP du 30 avril 2001 | Portée de l'article 10 du Traité | Recoupé | 5, 7 |
-| CCJA, arrêt n° 043/2005 du 7 juillet 2005 | Immunité d'exécution | Recoupé | 6 |
+| CCJA, arrêt n° 043/2005 du 7 juillet 2005 | Immunité d'exécution (sous l'acte de 1998) | Recoupé | 6 |
 | AUDCG (15 décembre 2010 ; JO OHADA 15 février 2011 ; en vigueur le 15 mai 2011), art. 5 et 234 | Preuve commerciale ; vente commerciale | Recoupé | 6, 8, 12 |
 | AUDCG, art. 16 ; art. 30 et s. ; dispositions relatives aux usages | Prescription ; entreprenant ; usages | À confirmer | 4, 9, 11, 12 |
 | AUSCGIE (30 janvier 2014), art. 1er, 2, 98, 130, 131 | Champ d'application ; ordre public ; personnalité ; abus | Recoupé | 1, 6, 11, 12 |
 | AUSCGIE, art. 106 et s. | Société en formation | À confirmer | 11 |
-| AUPSRVE (10 avril 1998), art. 28 à 30 | Exécution forcée ; immunité | Recoupé | 1, 6, 12 |
+| AUPSRVE (10 avril 1998), art. 28 à 30 | Exécution forcée ; immunité | Recoupé ; texte remplacé en 2023 (ligne suivante) | 1, 6, 12 |
+| AUPSRVE révisé (adopté le 17 octobre 2023 ; JO OHADA du 15 novembre 2023 ; en vigueur le 16 février 2024), art. 30 et 30-1 | Immunité d'exécution ; inscription d'office | Recoupé (lettre à confirmer) — ajouté en version 1.1 | 1, 6, 12 |
 | AUA et Acte uniforme relatif à la médiation (23 novembre 2017) | Arbitrage ; médiation | Recoupé | 2, 9, 12 |
 | Décision recensée dans Ohadata sous la référence J-06-35 | Preuve des actes de commerce | À confirmer (identification de la décision) | 12 |
 | Traité de l'UEMOA (Dakar, 10 janvier 1994 ; modifié le 29 janvier 2003), art. 6 et 43 | Primauté ; règlements et directives | Recoupé | 6, 7 |

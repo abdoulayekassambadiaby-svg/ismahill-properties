@@ -1,6 +1,10 @@
 # Principales abréviations {.simple .nontoc}
 
 ::: sigles
+
+aff.
+:   affaire
+
 al.
 :   alinéa
 
@@ -34,6 +38,9 @@ C. civ.
 C. pén.
 :   Code pénal
 
+CAMES
+:   Conseil africain et malgache pour l'enseignement supérieur
+
 Cass.
 :   Cour de cassation (France, sauf précision contraire)
 
@@ -61,6 +68,12 @@ CIJ
 CJ CEDEAO
 :   Cour de justice de la Communauté (CEDEAO)
 
+CJCE
+:   Cour de justice des Communautés européennes (devenue CJUE en 2009)
+
+CJUE
+:   Cour de justice de l'Union européenne
+
 Cons. const.
 :   Conseil constitutionnel (France, sauf précision contraire)
 
@@ -73,8 +86,17 @@ Const.
 Cour ADHP
 :   Cour africaine des droits de l'homme et des peuples
 
+CPC
+:   Code de procédure civile (France)
+
 CPCCA
 :   Code de procédure civile, commerciale et administrative (Côte d'Ivoire)
+
+CPP
+:   Code de procédure pénale (France, sauf précision contraire)
+
+CRPA
+:   Code des relations entre le public et l'administration (France)
 
 D.
 :   Digeste de Justinien (cité par livre, titre, fragment)
@@ -82,11 +104,23 @@ D.
 DC
 :   Décision de contrôle *a priori* du Conseil constitutionnel français
 
+gr. ch.
+:   Grande Chambre (Cour européenne des droits de l'homme ; Cour de justice de l'Union européenne)
+
 JORCI
 :   Journal officiel de la République de Côte d'Ivoire
 
+OAPI
+:   Organisation africaine de la propriété intellectuelle
+
 OHADA
 :   Organisation pour l'harmonisation en Afrique du droit des affaires
+
+QPC
+:   Question prioritaire de constitutionnalité (France)
+
+RCCM
+:   Registre du commerce et du crédit mobilier (OHADA)
 
 Req.
 :   Chambre des requêtes de la Cour de cassation (France, supprimée en 1947)

@@ -343,7 +343,7 @@ figcaption {
 .couverture .cv-pied span { color: var(--or-cv, #d9bd6a); }
 
 /* ---------- Quatrième de couverture ---------- */
-.quatrieme { page: couverture; break-before: page; position: relative; width: 170mm; height: 240mm; overflow: hidden; color: #f2ecdc; }
+.quatrieme { page: couverture; break-before: left; position: relative; width: 170mm; height: 240mm; overflow: hidden; color: #f2ecdc; }
 .quatrieme .q-texte { position: absolute; left: 20mm; right: 20mm; top: 34mm; font-size: 10.2pt; line-height: 1.45; }
 .quatrieme .q-texte p { text-indent: 0 !important; margin-bottom: 0.7em; text-align: justify; }
 .quatrieme .q-texte h4 { font-family: "Source Sans 3", sans-serif; font-style: normal; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; font-size: 8pt; color: var(--or-cv, #d9bd6a); margin: 0 0 4mm 0; }
@@ -359,5 +359,5 @@ figcaption {
 dl { margin: 0.4em 0; }
 dt { font-weight: 600; break-after: avoid; }
 dd { margin: 0 0 0.35em 1.4em; }
-.sigles dt { float: left; width: 22mm; font-weight: 600; font-variant: small-caps; }
-.sigles dd { margin-left: 24mm; }
+.sigles dt { float: left; clear: left; width: 28mm; white-space: nowrap; font-weight: 600; font-variant: small-caps; }
+.sigles dd { margin-left: 30mm; }

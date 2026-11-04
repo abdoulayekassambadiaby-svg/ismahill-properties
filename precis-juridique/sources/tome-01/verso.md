@@ -16,4 +16,4 @@ Ouvrage élaboré avec l'assistance d'un système d'intelligence artificielle (C
 
 #### Version
 
-Version 1.0 — novembre 2026. Les corrections et mises à jour seront intégrées dans les versions ultérieures.
+Version 1.1 — novembre 2026. Par rapport à la version 1.0 : signalement de la révision de l'AUPSRVE (acte révisé du 17 octobre 2023, en vigueur le 16 février 2024) aux chapitres 1, 6 et 12 et dans la fiche de vérification ; corrections de mise en page. Les corrections et mises à jour ultérieures seront intégrées dans les versions suivantes.

@@ -18,10 +18,10 @@ L'ordre de rédaction suit une logique de dépendance intellectuelle plutôt que
 
 | Tome | Intitulé | État |
 |---|---|---|
-| — | Document-cadre | Version 1.0 |
-| 1 | Théorie générale et fondements du droit | Rédigé — version 1.0 (douze chapitres) |
-| 2 | Méthodologie juridique et langage du juriste | Planifié — prochain tome |
-| 3 | Droit constitutionnel | Planifié |
+| — | Document-cadre | Version 1.1 |
+| 1 | Théorie générale et fondements du droit | Rédigé — version 1.1 (douze chapitres) |
+| 2 | Méthodologie juridique et langage du juriste | Rédigé — version 1.0 (quinze chapitres) |
+| 3 | Droit constitutionnel | Planifié — prochain tome |
 | 4 | Droit administratif | Planifié |
 | 5 | Droit civil | Planifié |
 | 6 | Droit commercial et droit des affaires OHADA | Planifié |

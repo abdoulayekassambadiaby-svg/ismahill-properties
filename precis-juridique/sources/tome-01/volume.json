@@ -6,12 +6,19 @@
   "titre": "Théorie générale et fondements du droit",
   "sous_titre": "Notion de droit, fondements, systèmes, sources et droits subjectifs",
   "titre_courant": "Tome I · Théorie générale et fondements du droit",
-  "edition": "Version 1.0 · état du droit au 4 novembre 2026",
+  "edition": "Version 1.1 · état du droit au 4 novembre 2026",
   "mention_titre": "Édition complète en douze chapitres<br>Niveaux : licence, master, préparation à la recherche",
   "date_iso": "2026-11-04",
-  "couleurs": {"fond": "#122a4c", "fond2": "#0a1830", "accent": "#173a6b", "or": "#d6b866"},
+  "couleurs": {
+    "fond": "#122a4c",
+    "fond2": "#0a1830",
+    "accent": "#173a6b",
+    "or": "#d6b866"
+  },
   "verso": "verso.md",
-  "liminaires": ["00-sigles.md"],
+  "liminaires": [
+    "00-sigles.md"
+  ],
   "fichiers": [
     "01-avant-propos.md",
     "02-introduction-generale.md",
