@@ -17,9 +17,48 @@
                    supprimez la ligne pour vos vrais biens)
    - disponible  : false affiche « Loué / Vendu »
    - date        : date de publication AAAA-MM-JJ (tri : plus récent d'abord)
+   - dossier     : (terrains) dossier foncier vérifiable affiché sur la
+                   fiche et sur la page « Vérification ». Voir le modèle
+                   sur le terrain d'exemple et le README (§ 7).
    ===================================================================== */
 
 export type TypeBien = "location" | "vente" | "terrain";
+
+/** Un document du dossier foncier. */
+export type DocumentFoncier = {
+  nom: string; // ex. "Arrêté de Concession Définitive (ACD)"
+  description?: string;
+  delivrePar?: string; // ex. "Ministère de la Construction"
+  date?: string; // date du document AAAA-MM-JJ
+  /** Version masquée publiée sur le site (fichier dans public/dossiers/…). Son empreinte est calculée automatiquement. */
+  apercu?: string;
+  /** Empreinte de la copie COMPLÈTE envoyée aux clients (non publiée) : obtenue avec `npm run empreinte -- fichier.pdf`. */
+  empreinte?: string;
+};
+
+/** Un contrôle effectué sur la parcelle. */
+export type Controle = {
+  libelle: string;
+  statut: "fait" | "en-cours" | "votre-notaire"; // "votre-notaire" : à faire faire par le notaire de l'acheteur
+  date?: string; // AAAA-MM-JJ
+  detail?: string;
+};
+
+export type DossierFoncier = {
+  reference: string; // ex. "ISM-T-2026-001", unique, à communiquer aux clients
+  acd: {
+    numero?: string; // laissez vide si vous préférez ne le communiquer qu'en privé
+    lotissement?: string;
+    ilot?: string;
+    lot?: string;
+    superficie?: number; // en m², telle qu'inscrite sur l'ACD
+  };
+  /** Position relevée sur place (Google Maps : appui long sur le point → coordonnées). */
+  position?: { lat: number; lng: number; releveeLe: string };
+  documents: DocumentFoncier[];
+  controles: Controle[];
+  misAJour: string; // AAAA-MM-JJ
+};
 
 export type Bien = {
   slug: string;
@@ -39,6 +78,7 @@ export type Bien = {
   exemple?: boolean;
   disponible?: boolean;
   date: string;
+  dossier?: DossierFoncier;
 };
 
 export const biens: Bien[] = [
@@ -126,5 +166,54 @@ export const biens: Bien[] = [
     exemple: true,
     disponible: true,
     date: "2026-10-20",
+    dossier: {
+      reference: "ISM-T-EXEMPLE",
+      acd: {
+        numero: "", // [À COMPLÉTER] ou laissez vide
+        lotissement: "[À COMPLÉTER]",
+        ilot: "12",
+        lot: "34",
+        superficie: 500,
+      },
+      position: { lat: 5.3553, lng: -3.8847, releveeLe: "2026-10-18" }, // EXEMPLE : coordonnées approximatives de Bingerville
+      documents: [
+        {
+          nom: "Arrêté de Concession Définitive (ACD)",
+          description: "Extrait masqué : les données personnelles du titulaire sont cachées.",
+          delivrePar: "Ministère en charge de la Construction et de l'Urbanisme",
+          date: "2024-05-14",
+          apercu: "/dossiers/exemple-acd-extrait.pdf",
+        },
+        {
+          nom: "Plan de la parcelle",
+          description: "Plan annexé à l'ACD, avec les cotes et les bornes.",
+          delivrePar: "Annexe de l'ACD",
+        },
+        {
+          nom: "État foncier",
+          description: "Situation de la parcelle au livre foncier : propriétaire inscrit, hypothèques, oppositions.",
+          delivrePar: "Conservation foncière",
+          date: "2026-10-10",
+        },
+      ],
+      controles: [
+        { libelle: "ACD présenté et références concordantes avec le plan", statut: "fait", date: "2026-10-12" },
+        { libelle: "Identité du vendeur conforme au titulaire de l'ACD", statut: "fait", date: "2026-10-12" },
+        { libelle: "État foncier récent : aucune hypothèque ni opposition", statut: "fait", date: "2026-10-10" },
+        { libelle: "Visite sur place, terrain libre de tout occupant", statut: "fait", date: "2026-10-18" },
+        { libelle: "Situation au regard des emprises et zones non constructibles", statut: "en-cours" },
+        {
+          libelle: "Authenticité de l'ACD confirmée auprès de l'administration",
+          statut: "votre-notaire",
+          detail: "Votre notaire s'en charge avant la signature : c'est la vérification qui fait foi.",
+        },
+        {
+          libelle: "Bornage contradictoire par un géomètre expert",
+          statut: "votre-notaire",
+          detail: "Recommandé : confirme les limites et la superficie réelles sur le terrain.",
+        },
+      ],
+      misAJour: "2026-10-18",
+    },
   },
 ];

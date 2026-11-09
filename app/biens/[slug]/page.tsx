@@ -5,9 +5,10 @@ import { biens } from "@/data/biens";
 import { site } from "@/data/site";
 import { biensTries, formatPrix, imgUrl, siteUrl, typeLabels, waLink } from "@/lib/utils";
 import Gallery from "@/components/Gallery";
+import DossierFoncier from "@/components/DossierFoncier";
 import PropertyCard, { TypeBadge } from "@/components/PropertyCard";
 import { Reveal } from "@/components/Motion";
-import { IconBath, IconBed, IconCheck, IconPhone, IconPin, IconRooms, IconSurface, IconWhatsApp } from "@/components/Icons";
+import { IconBath, IconBed, IconCheck, IconPhone, IconPin, IconRooms, IconShield, IconSurface, IconWhatsApp } from "@/components/Icons";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -115,7 +116,16 @@ export default async function BienPage({ params }: Props) {
               <a href={`tel:${site.contact.telephones[0].lien}`} className="btn btn-outline mt-3 w-full">
                 <IconPhone className="h-5 w-5" /> Appeler le {site.contact.telephones[0].affiche}
               </a>
-              <p className="mt-4 text-center text-xs text-encre/50">Référence : {b.slug}</p>
+              {b.dossier && (
+                <a href="#dossier-foncier" className="mt-5 flex items-center gap-3 rounded-2xl bg-emerald-50 px-4 py-3 text-sm ring-1 ring-emerald-600/20 hover:ring-emerald-600/50">
+                  <IconShield className="h-6 w-6 shrink-0 text-emerald-700" />
+                  <span>
+                    <strong className="block font-titre text-emerald-800">Titre ACD · dossier vérifiable</strong>
+                    <span className="text-encre/65">Documents, contrôles et position GPS</span>
+                  </span>
+                </a>
+              )}
+              <p className="mt-4 text-center text-xs text-encre/50">Référence : {b.dossier?.reference ?? b.slug}</p>
             </div>
           </aside>
 
@@ -138,6 +148,12 @@ export default async function BienPage({ params }: Props) {
                   ))}
                 </ul>
               </Reveal>
+            )}
+
+            {b.dossier && (
+              <div className="mt-12">
+                <DossierFoncier bien={b} dossier={b.dossier} />
+              </div>
             )}
           </div>
 

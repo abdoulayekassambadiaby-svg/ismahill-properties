@@ -55,14 +55,14 @@ export default function Header() {
           </picture>
         </Link>
 
-        <nav aria-label="Navigation principale" className="hidden lg:block">
+        <nav aria-label="Navigation principale" className="hidden xl:block">
           <ul className="flex items-center gap-1">
             {navigation.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   className={cn(
-                    "relative rounded-full px-3.5 py-2 font-titre text-[0.9rem] font-semibold transition-colors",
+                    "relative whitespace-nowrap rounded-full px-3 py-2 font-titre text-[0.9rem] font-semibold transition-colors",
                     isActive(item.href) ? "text-rose" : "text-marine hover:text-rose",
                   )}
                 >
@@ -79,18 +79,18 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <a
             href={`tel:${site.contact.telephones[0].lien}`}
-            className="hidden items-center gap-2 font-titre text-sm font-semibold text-marine xl:flex"
+            className="hidden items-center gap-2 font-titre text-sm font-semibold text-marine 2xl:flex"
           >
             <IconPhone className="h-4 w-4 text-rose" />
             {site.contact.telephones[0].affiche}
           </a>
-          <Link href="/proprietaires/" className="btn btn-rose hidden !min-h-11 !px-5 !text-sm md:inline-flex">
+          <Link href="/proprietaires/" className="btn btn-rose hidden !min-h-11 !px-5 !text-sm whitespace-nowrap md:inline-flex">
             Confier mon bien
           </Link>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="grid h-11 w-11 place-items-center rounded-full text-marine hover:bg-marine/5 lg:hidden"
+            className="grid h-11 w-11 place-items-center rounded-full text-marine hover:bg-marine/5 xl:hidden"
             aria-expanded={open}
             aria-controls="menu-mobile"
             aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
@@ -108,7 +108,7 @@ export default function Header() {
             animate={{ opacity: 1, height: "calc(100dvh - 4rem)" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-y-auto border-t border-marine/10 bg-creme lg:hidden"
+            className="overflow-y-auto border-t border-marine/10 bg-creme xl:hidden"
           >
             <nav aria-label="Navigation mobile" className="container-site flex min-h-full flex-col py-6">
               <ul className="space-y-1">
