@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Bien } from "@/data/biens";
 import { cn, formatPrix, typeLabels } from "@/lib/utils";
-import { IconBath, IconBed, IconPin, IconSurface } from "./Icons";
+import { IconBath, IconBed, IconPin, IconShield, IconSurface } from "./Icons";
 import SmartImage from "./SmartImage";
 
 export function TypeBadge({ bien, className }: { bien: Bien; className?: string }) {
@@ -75,6 +75,9 @@ export default function PropertyCard({ bien, priority = false }: { bien: Bien; p
           )}
           {bien.chambres && (
             <li className="flex items-center gap-1.5"><IconBed className="h-4 w-4 text-or" />{bien.chambres} ch.</li>
+          )}
+          {bien.dossier && (
+            <li className="flex items-center gap-1.5 font-semibold text-emerald-700"><IconShield className="h-4 w-4" />ACD · dossier vérifiable</li>
           )}
           {bien.sallesDeBain && (
             <li className="flex items-center gap-1.5"><IconBath className="h-4 w-4 text-or" />{bien.sallesDeBain} sdb</li>

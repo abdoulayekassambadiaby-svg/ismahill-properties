@@ -16,6 +16,8 @@ Le site est **100 % statique** : rapide, sans serveur à entretenir, et héberge
 | Ajouter, modifier ou retirer un bien | `data/biens.ts` |
 | Remplacer les photos | voir `PHOTOS.md` |
 | Compléter les mentions légales | `data/site.ts` (section `mentionsLegales`) |
+| Modifier les textes et engagements du service « Vérification » | `data/verification.ts` |
+| Publier le dossier foncier d'un terrain | `data/biens.ts` (champ `dossier`) — voir § 7 |
 
 Cherchez **`[À COMPLÉTER]`** dans ces fichiers : ce sont les informations encore manquantes
 (horaires, histoire de l'agence, RCCM, quartiers des biens…).
@@ -186,3 +188,52 @@ Le site produit un dossier `out/` de pages HTML statiques.
   `npm run build`, dossier de publication `out` → *Deploy*. Domaine : *Domain management*.
 - **Cloudflare Pages** : https://dash.cloudflare.com → *Workers & Pages → Create → Pages → Connect to Git*
   → preset *Next.js (Static HTML Export)*, commande `npm run build`, dossier `out`.
+
+---
+
+## 7. Service « Vérifiez avant d'acheter » (diaspora)
+
+La page **/verification/** et le bloc **« Dossier foncier vérifiable »** des fiches terrain permettent à un
+acheteur à l'étranger de contrôler les documents d'une parcelle depuis chez lui :
+
+- le **dossier foncier** de chaque terrain : références de l'ACD, documents, contrôles effectués (avec dates),
+  position GPS sur une carte satellite ;
+- l'**outil de vérification** : le client dépose le fichier reçu, son navigateur calcule l'empreinte numérique
+  (SHA-256) et la compare au registre publié. Un seul octet modifié = « Document non reconnu ».
+  Le fichier ne quitte jamais l'appareil du client ;
+- la **recherche par référence** (ex. `ISM-T-2026-001`) : un client démarché par un intermédiaire vérifie que le
+  dossier existe bien chez vous.
+
+> ⚠️ Avant la mise en ligne, relisez les engagements de `data/verification.ts` : ne gardez que ce que l'agence
+> applique réellement. Complétez aussi les liens officiels laissés vides (`lien: ""`).
+
+### Publier le dossier d'un terrain
+
+1. **Extrait masqué** (publié) : scannez l'ACD, masquez les données personnelles du titulaire (nom, n° de pièce
+   d'identité, adresse), exportez en PDF et déposez-le dans `public/dossiers/` (nom sans espaces ni accents).
+   Son empreinte est calculée automatiquement.
+2. **Copie complète** (envoyée aux clients, jamais publiée) : préparez le PDF **définitif**, puis :
+
+   ```bash
+   npm run empreinte -- "chemin/vers/ACD complet.pdf"
+   ```
+
+   Copiez la ligne `empreinte: "…"` affichée dans le document correspondant de `data/biens.ts`.
+3. Dans `data/biens.ts`, ajoutez le bloc `dossier: { … }` au terrain (copiez celui du terrain d'exemple) :
+   référence unique, références de l'ACD, documents, contrôles (`"fait"`, `"en-cours"` ou `"votre-notaire"`),
+   position GPS et date de mise à jour.
+4. Publiez. Le registre se reconstruit tout seul ; le site refuse de se construire si un fichier manque, si une
+   empreinte est mal copiée ou si une référence est utilisée deux fois.
+
+**Position GPS** : sur place, ouvrez Google Maps, appui long sur la parcelle → les coordonnées s'affichent
+(ex. `5.355300, -3.884700`) ; recopiez-les dans `position`.
+
+**Règles d'or pour que la vérification fonctionne :**
+
+- envoyez toujours **le même fichier** que celui dont vous avez publié l'empreinte : le ré-enregistrer, le
+  compresser ou le re-scanner change l'empreinte ;
+- sur WhatsApp, envoyez-le en **« Document »**, jamais en « Photo » (WhatsApp compresse les photos) ;
+- si un document change (nouvel état foncier, par exemple), ajoutez la nouvelle empreinte et mettez à jour
+  `misAJour`.
+
+Supprimez le terrain d'exemple et le fichier `public/dossiers/exemple-acd-extrait.pdf` quand vous publiez vos vrais terrains.

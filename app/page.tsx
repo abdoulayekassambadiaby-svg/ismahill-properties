@@ -164,6 +164,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== DIASPORA : VÉRIFICATION ===== */}
+      <section className="container-site pt-20 md:pt-28">
+        <Reveal>
+          <div className="grid items-center gap-8 rounded-[2rem] bg-white p-7 shadow-[0_30px_70px_-40px_rgba(1,47,109,0.5)] ring-1 ring-marine/5 md:p-12 lg:grid-cols-[auto_1fr_auto] lg:gap-10">
+            <span className="grid h-16 w-16 place-items-center rounded-2xl bg-marine text-white">
+              <IconShield className="h-8 w-8" />
+            </span>
+            <div>
+              <p className="eyebrow">Diaspora</p>
+              <h2 className="mt-2 text-2xl leading-tight font-extrabold md:text-3xl">Achetez un terrain à distance, en vérifiant tout</h2>
+              <p className="mt-3 max-w-2xl leading-relaxed text-encre/70">
+                Terrains avec ACD uniquement, dossier foncier consultable en ligne, documents vérifiables sur ce site, visite en vidéo et
+                paiement chez le notaire de votre choix.
+              </p>
+            </div>
+            <Link href="/verification/" className="btn btn-rose shrink-0 self-start lg:self-auto">
+              Vérifiez avant d'acheter <IconArrow className="h-4 w-4" />
+            </Link>
+          </div>
+        </Reveal>
+      </section>
+
       {/* ===== DERNIERS BIENS ===== */}
       <section className="container-site py-20 md:py-28">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">

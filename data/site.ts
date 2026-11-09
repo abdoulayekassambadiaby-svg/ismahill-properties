@@ -74,6 +74,7 @@ export const navigation = [
   { label: "Services", href: "/services/" },
   { label: "Propriétaires", href: "/proprietaires/" },
   { label: "Nos biens", href: "/biens/" },
+  { label: "Vérification", href: "/verification/" },
   { label: "À propos", href: "/a-propos/" },
   { label: "Contact", href: "/contact/" },
 ];
@@ -192,7 +193,7 @@ export const services: Service[] = [
     description:
       "Vous avez un projet d'acquisition de terrain, de construction ou d'investissement locatif ? Nous vous assistons à chaque étape et vous mettons en relation avec des professionnels de confiance pour avancer sereinement.",
     points: [
-      "Recherche et vérification de terrains",
+      "Recherche de terrains avec ACD et dossier foncier vérifiable en ligne",
       "Accompagnement dans les démarches foncières",
       "Mise en relation avec des professionnels du bâtiment",
       "Suivi de votre projet, y compris depuis l'étranger",

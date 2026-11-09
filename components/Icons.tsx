@@ -163,3 +163,39 @@ export const serviceIcons = {
   conseil: IconChat,
   projet: IconCompass,
 } as const;
+
+/* Icônes du service de vérification */
+export const IconDocument = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M7 3h7l5 5v13H7z" />
+    <path d="M14 3v5h5M10 13h6M10 17h4" />
+  </svg>
+);
+export const IconUpload = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M12 16V4M7 9l5-5 5 5M4 16v4h16v-4" />
+  </svg>
+);
+export const IconAlert = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M12 3 2 20h20L12 3Z" />
+    <path d="M12 10v4M12 17v.5" />
+  </svg>
+);
+export const IconFingerprint = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M6.5 6.5A8 8 0 0 1 20 12v1M4 10a8 8 0 0 1 1-2.5M4 14v-2" />
+    <path d="M8 18a12 12 0 0 0 0-6 4 4 0 0 1 8 0v2M12 12v2a12 12 0 0 1-2 7M16 17a16 16 0 0 1-1 4" />
+  </svg>
+);
+export const IconVideo = (p: P) => (
+  <svg {...base(p)}>
+    <rect x="3" y="6" width="13" height="12" rx="2" />
+    <path d="m16 10 5-3v10l-5-3" />
+  </svg>
+);
+export const IconScale = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0L5 7ZM19 7l-3 7a3 3 0 0 0 6 0l-3-7Z" />
+  </svg>
+);
