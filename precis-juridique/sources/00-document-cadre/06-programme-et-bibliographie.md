@@ -21,7 +21,7 @@ L'ordre de rédaction suit une logique de dépendance intellectuelle plutôt que
 | — | Document-cadre | Version 1.1 |
 | 1 | Théorie générale et fondements du droit | Rédigé — version 1.1 (douze chapitres) |
 | 2 | Méthodologie juridique et langage du juriste | Rédigé — version 1.0 (quinze chapitres) |
-| 3 | Droit constitutionnel | Rédigé — version 1.0 (dix-sept chapitres) |
+| 3 | Droit constitutionnel | Rédigé — version 1.1 (dix-sept chapitres) |
 | 4 | Droit administratif | Planifié — prochain tome |
 | 5 | Droit civil | Planifié |
 | 6 | Droit commercial et droit des affaires OHADA | Planifié |

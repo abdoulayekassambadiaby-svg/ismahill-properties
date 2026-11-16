@@ -1,6 +1,6 @@
 #### État du droit
 
-Le présent tome expose l'état du droit tel qu'il a pu être établi au 4 novembre 2026. Les textes cités sont ceux en vigueur à cette date, sous réserve des modifications intervenues postérieurement ou non encore publiées. Les textes abrogés ou modifiés sont signalés comme tels lorsqu'ils sont cités.
+Le présent tome expose l'état du droit tel qu'il a pu être établi au 16 novembre 2026. Les textes cités sont ceux en vigueur à cette date, sous réserve des modifications intervenues postérieurement ou non encore publiées. Les textes abrogés ou modifiés sont signalés comme tels lorsqu'ils sont cités.
 
 #### Statut des références
 
@@ -16,4 +16,4 @@ Ouvrage élaboré avec l'assistance d'un système d'intelligence artificielle (C
 
 #### Version
 
-Version 1.0 — novembre 2026. Les corrections et mises à jour seront intégrées dans les versions ultérieures.
+Version 1.1 — novembre 2026. Par rapport à la version 1.0 : approfondissement des dix-sept chapitres (sections d'analyse, jurisprudences et exercices corrigés supplémentaires), ajout d'une chronologie constitutionnelle et mise à jour de la fiche de vérification. Les corrections et mises à jour ultérieures seront intégrées dans les versions suivantes.

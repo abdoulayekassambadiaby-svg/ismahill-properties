@@ -142,7 +142,7 @@ Le droit constitutionnel est le droit de l'**encadrement juridique du pouvoir po
 
 Le Tome 3 s'appuie sur le Tome 1 (hiérarchie des normes) et précède le Tome 4, avec lequel il ne se confond pas : le droit constitutionnel traite de l'attribution et de la limitation du pouvoir politique, le droit administratif de l'action administrative et de son contrôle. Orientation : F. Hamon et M. Troper, *Droit constitutionnel* ; L. Favoreu et al., *Droit constitutionnel* ; F. Wodié, *Institutions politiques et droit constitutionnel en Côte d'Ivoire* ; G. Conac (dir.), *Les Cours suprêmes en Afrique* ; K. Mbaye, *Les droits de l'homme en Afrique*.
 
-**État : rédigé (version 1.0, novembre 2026), en dix-sept chapitres.**
+**État : rédigé (version 1.1, novembre 2026), en dix-sept chapitres.**
 
 # Droit administratif {.chapitre num="Tome 4" court="Tome 4 — Droit administratif"}
 

@@ -6,9 +6,9 @@
   "titre": "Droit constitutionnel",
   "sous_titre": "Théorie de l'État et de la Constitution, régimes politiques, droit constitutionnel ivoirien, droits fondamentaux et démocratie électorale",
   "titre_courant": "Tome III · Droit constitutionnel",
-  "edition": "Version 1.0 · état du droit au 4 novembre 2026",
+  "edition": "Version 1.1 · état du droit au 16 novembre 2026",
   "mention_titre": "Édition complète en dix-sept chapitres<br>Niveaux : licence, master, concours, préparation à la recherche",
-  "date_iso": "2026-11-04",
+  "date_iso": "2026-11-16",
   "couleurs": {
     "fond": "#4a1626",
     "fond2": "#2c0b16",
@@ -39,6 +39,7 @@
     "ch15.md",
     "ch16.md",
     "ch17.md",
+    "89-chronologie.md",
     "90-bibliographie.md",
     "91-fiche-verification.md"
   ],

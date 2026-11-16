@@ -1,6 +1,6 @@
 # Annexe — Fiche de vérification des références {.simple}
 
-Conformément à la charte de fiabilité de la collection, la présente fiche recense les textes et décisions ivoiriens et régionaux cités dans le tome et indique le degré de vérification atteint à la date de rédaction (4 novembre 2026). Les références classiques de droit étranger et international, largement documentées, ne sont reprises que lorsqu'un point particulier le justifie.
+Conformément à la charte de fiabilité de la collection, la présente fiche recense les textes et décisions ivoiriens et régionaux cités dans le tome et indique le degré de vérification atteint à la date de rédaction (4 novembre 2026, mise à jour le 16 novembre 2026). Les références classiques de droit étranger et international, largement documentées, ne sont reprises que lorsqu'un point particulier le justifie.
 
 ::: {.retenir titre="Légende"}
 - **Vérifié** : référence confrontée au texte officiel ou à sa reproduction par l'institution concernée, ou à une décision qui en cite la lettre.
@@ -60,6 +60,11 @@ Le texte officiel consolidé de la Constitution (version issue des révisions de
 | Ordonnance du 20 septembre 2013 (Haute Autorité pour la bonne gouvernance) | Bonne gouvernance | À confirmer (n° 2013-660 ou 2013-661) | 14 |
 | Code de la nationalité (loi n° 61-415 du 14 décembre 1961, modifiée) | Nationalité | À confirmer | 1 |
 | Loi d'orientation de l'administration territoriale (2014) | Décentralisation | À confirmer | 3 |
+| Lois n° 2014-451 et n° 2014-452 du 5 août 2014 ; loi n° 2023-861 du 20 novembre 2023 | Administration territoriale ; districts autonomes | Recoupé | 3 |
+| Loi n° 2019-870 du 14 octobre 2019 ; décret n° 2020-941 du 25 novembre 2020 | Représentation des femmes (quota de 30 %) | Recoupé | 12, 15, 16 |
+| Loi n° 2017-867 du 27 décembre 2017, modifiée par la loi n° 2022-978 du 20 décembre 2022 ; loi n° 2004-643 | Régime de la presse ; dépénalisation | Recoupé (portée exacte de la dépénalisation à confirmer) | 14, 15 |
+| Ordonnance d'amnistie du 6 août 2018 | Amnistie | Recoupé (numéro 2018-669 à confirmer) | 10 |
+| Directive n° 06/2009/CM/UEMOA ; loi organique relative aux lois de finances | Finances publiques | Recoupé / À confirmer (loi organique) | 12 |
 
 : Tableau B — Statut des textes historiques et législatifs
 
@@ -76,6 +81,8 @@ Le texte officiel consolidé de la Constitution (version issue des révisions de
 | Décisions de 2020 sur la qualité de « plaideur » ; décision n° 2023-001 du 11 mai 2023 | Exception d'inconstitutionnalité | Recoupé (Tome 1) | 6 |
 | Décision n° CI-2023-007 du 4 août 2023 | Révision de 2023 | Recoupé | 5, 12 |
 | Décisions du 8 septembre 2025 et du 4 novembre 2025 | Candidatures et résultats de l'élection présidentielle de 2025 | Recoupé (numéros à confirmer) | 13, 16 |
+| Décision n° CI-2019-006 du 13 août 2019 | Loi portant recomposition de la CEI | Recoupé | 13, 16 |
+| Décision n° 053 du 11 février 2021 | Quota de femmes sur les listes législatives | Recoupé (solution à confirmer) | 12, 13 |
 
 : Tableau C — Statut des décisions du Conseil constitutionnel
 
@@ -100,6 +107,13 @@ Le texte officiel consolidé de la Constitution (version issue des révisions de
 | Cour constitutionnelle du Niger, avis du 25 mai 2009 et arrêt du 12 juin 2009 | Référendum de 2009 | Recoupé | 5, 9 |
 | Conseil constitutionnel du Sénégal, décision n° 1/C/2024 du 15 février 2024 | Report de l'élection présidentielle | Recoupé | 9 |
 | TIDM, 23 septembre 2017, *Ghana / Côte d'Ivoire* | Frontière maritime | Recoupé (Tome 1) | 1 |
+| Résolution 1975 (2011) du Conseil de sécurité (30 mars 2011) | Crise ivoirienne | Recoupé | 10, 17 |
+| CPI, chambre de première instance, 15 janvier 2019 ; chambre d'appel, 31 mars 2021 (*Gbagbo et Blé Goudé*) | Acquittement | Recoupé | 10 |
+| Retrait du Mali, du Burkina Faso et du Niger de la CEDEAO (effectif le 29 janvier 2025) ; traité de la Confédération des États du Sahel (6 juillet 2024) | Intégration régionale | Recoupé | 9, 17 |
+| Togo, loi n° 2024-005 portant Constitution (promulguée le 6 mai 2024) | Changement de régime | Recoupé | 5, 7 |
+| Cour suprême du Kenya, 31 mars 2022 (« BBI ») | Révision constitutionnelle | Recoupé | 5 |
+| Bénin, Constitution de 1990, art. 122 (saisine citoyenne) | Justice constitutionnelle | Recoupé (numérotation après la révision de 2019 à confirmer) | 6 |
+| CIJ, 10 octobre 2002, *Cameroun c. Nigeria* | Frontières | Recoupé | 1 |
 
 : Tableau D — Statut des références africaines et régionales
 
