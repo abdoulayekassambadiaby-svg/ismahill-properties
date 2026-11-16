@@ -1,0 +1,13 @@
+# Avant-propos {.simple}
+
+Le Tome 5 a exposé le droit civil, droit commun des rapports privés. Le Tome 6 étudie le droit de l'**activité économique organisée** : celui du commerçant et de l'entreprenant, des sociétés, du crédit et de ses garanties, du recouvrement des créances, des entreprises en difficulté, des modes alternatifs de règlement des différends et de la régulation des marchés.
+
+Dans l'espace ouest et centre-africain, ce droit présente une originalité majeure : il est en grande partie **uniforme**. Le Traité relatif à l'harmonisation du droit des affaires en Afrique, signé à Port-Louis le 17 octobre 1993 et révisé à Québec le 17 octobre 2008, a institué l'Organisation pour l'harmonisation en Afrique du droit des affaires (OHADA), qui adopte des **actes uniformes** directement applicables et obligatoires dans les États parties, nonobstant toute disposition contraire de droit interne (Traité, art. 10). Leur interprétation est unifiée par une juridiction supranationale, la **Cour commune de justice et d'arbitrage (CCJA)**, qui siège à Abidjan. Le juriste ivoirien des affaires applique donc, pour l'essentiel, un droit commun à dix-sept États.
+
+Ce droit uniforme n'épuise pas la matière. Le droit de la **concurrence**, le droit **bancaire** et des **instruments de paiement** relèvent du droit communautaire de l'UEMOA ; l'**investissement**, la **consommation**, l'organisation des **juridictions de commerce** et une partie du droit pénal des affaires relèvent du droit ivoirien. Le tome articule ces trois niveaux.
+
+Le droit OHADA a été profondément renouvelé depuis 2010 : droit commercial général et sûretés (2010), sociétés (2014), procédures collectives (2015), droit comptable (2017), arbitrage et médiation (2017), voies d'exécution (2023). Le tome expose l'état des textes au 16 novembre 2026 et signale les textes révisés ou abrogés. Les actes uniformes sont cités d'après leur version en vigueur ; lorsque la numérotation d'un article n'a pu être confrontée au Journal officiel de l'OHADA, la fiche de vérification le précise. La jurisprudence de la CCJA est citée lorsque sa référence a pu être recoupée ; aucune décision n'a été reconstituée.
+
+Le droit des sûretés a fait l'objet de deux chapitres approfondis dans le Tome 5 ; le présent tome en reprend la synthèse sous l'angle du financement de l'entreprise. Le droit pénal des affaires relève du Tome 7 ; la procédure civile et les juridictions, du Tome 8 ; le droit du travail, du Tome 9 ; le droit international économique, du Tome 10.
+
+Chaque chapitre suit les douze rubriques de la collection et comporte au moins deux exercices entièrement corrigés.

@@ -1,0 +1,52 @@
+{
+  "fichier_pdf": "Tome-06_Droit-des-affaires-OHADA.pdf",
+  "collection": "Précis de formation juridique approfondie",
+  "sous_collection": "Droit ivoirien · Droit OHADA · Droit comparé",
+  "tome": "Tome VI",
+  "titre": "Droit commercial et droit des affaires OHADA",
+  "sous_titre": "Institutions, droit commercial général, sociétés, sûretés, recouvrement, procédures collectives, arbitrage, droit économique",
+  "titre_courant": "Tome VI · Droit des affaires OHADA",
+  "edition": "Version 1.0 · état du droit au 16 novembre 2026",
+  "mention_titre": "Édition complète en vingt chapitres<br>Niveaux : licence, master, concours, préparation à la recherche",
+  "date_iso": "2026-11-16",
+  "couleurs": {
+    "fond": "#2e1f4a",
+    "fond2": "#1c1230",
+    "accent": "#4a3270",
+    "or": "#d9bd6a"
+  },
+  "verso": "verso.md",
+  "liminaires": [
+    "00-sigles.md"
+  ],
+  "fichiers": [
+    "01-avant-propos.md",
+    "02-introduction-generale.md",
+    "ch01.md",
+    "ch02.md",
+    "ch03.md",
+    "ch04.md",
+    "ch05.md",
+    "ch06.md",
+    "ch07.md",
+    "ch08.md",
+    "ch09.md",
+    "ch10.md",
+    "ch11.md",
+    "ch12.md",
+    "ch13.md",
+    "ch14.md",
+    "ch15.md",
+    "ch16.md",
+    "ch17.md",
+    "ch18.md",
+    "ch19.md",
+    "ch20.md",
+    "89-actes-uniformes.md",
+    "90-bibliographie.md",
+    "91-fiche-verification.md"
+  ],
+  "quatrieme": "q4.md",
+  "profondeur_sommaire": 2,
+  "profondeur_tdm": 3
+}
