@@ -25,7 +25,7 @@ Un étudiant ivoirien qui consulte un Code civil français récent lit un droit 
 
 ### B. Les lois ivoiriennes de codification du droit de la personne et de la famille
 
-En 1964, le législateur ivoirien a adopté un ensemble de lois civiles — nom, état civil, mariage, divorce et séparation de corps, paternité et filiation, adoption, successions, donations entre vifs et testaments — et a mis fin à l'application des coutumes en matière de statut personnel par une loi relative aux dispositions diverses applicables aux matières régies par ces lois nouvelles (loi n° 64-381 du 7 octobre 1964) [V]{.ver} pour l'intitulé exact. Ce choix d'unification et de modernisation du droit de la famille a été conservé depuis, mais les textes ont été successivement modifiés (1983, 1998, 2013) puis, pour l'essentiel, **remplacés** :
+En 1964, le législateur ivoirien a adopté un ensemble de lois civiles — nom, état civil, mariage, divorce et séparation de corps, paternité et filiation, adoption, successions, donations entre vifs et testaments — et a mis fin à l'application des coutumes en matière de statut personnel par une loi relative aux dispositions diverses applicables aux matières régies par ces lois nouvelles (loi n° 64-381 du 7 octobre 1964) [V]{.ver} pour l'intitulé exact ; cette loi est elle-même désignée comme abrogée par la loi de 2019 sur les successions, sans que l'unification du statut personnel soit remise en cause [V]{.ver}. Ce choix d'unification et de modernisation du droit de la famille a été conservé depuis, mais les textes ont été successivement modifiés (1983, 1998, 2013) puis, pour l'essentiel, **remplacés** :
 
 | Matière | Texte de 1964 | Texte en vigueur | Statut |
 |---|---|---|---|
@@ -34,6 +34,7 @@ En 1964, le législateur ivoirien a adopté un ensemble de lois civiles — nom,
 | Minorité | Loi n° 70-483 du 3 août 1970 | Loi n° 2019-572 du 26 juin 2019 | Recoupé |
 | Successions | Loi n° 64-379 | Loi n° 2019-573 du 26 juin 2019 | Recoupé |
 | Adoption | Loi n° 64-378, mod. 1983 | Loi n° 2019-987 du 27 novembre 2019 | Recoupé |
+| Donations et testaments | Loi n° 64-380 | Loi n° 2020-669 du 10 septembre 2020 (libéralités) | Recoupé [V]{.ver} |
 | Nom | Loi n° 64-373 | Loi n° 2020-490 du 29 mai 2020 | Recoupé |
 | Divorce et séparation de corps | Loi n° 64-376, mod. 1983 et 1998 | Loi n° 2022-793 du 13 octobre 2022 | Recoupé |
 | État civil | Loi n° 64-374 (puis 1999) | Loi n° 2018-862 du 19 novembre 2018, mod. | Recoupé |
