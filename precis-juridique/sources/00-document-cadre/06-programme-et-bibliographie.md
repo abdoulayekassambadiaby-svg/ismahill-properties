@@ -24,8 +24,8 @@ L'ordre de rédaction suit une logique de dépendance intellectuelle plutôt que
 | 3 | Droit constitutionnel | Rédigé — version 1.1 (dix-sept chapitres) |
 | 4 | Droit administratif | Rédigé — version 1.0 (quinze chapitres) |
 | 5 | Droit civil | Rédigé — version 1.0 (vingt chapitres, cinq livres) |
-| 6 | Droit commercial et droit des affaires OHADA | Planifié — prochain tome |
-| 7 | Droit pénal et sciences criminelles | Planifié |
+| 6 | Droit commercial et droit des affaires OHADA | Rédigé — version 1.0 (vingt chapitres, huit parties) |
+| 7 | Droit pénal et sciences criminelles | Planifié — prochain tome |
 | 8 | Procédures et institutions judiciaires | Planifié |
 | 9 | Droit social | Planifié |
 | 10 | Droit international et intégration régionale | Planifié |

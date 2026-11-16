@@ -276,7 +276,7 @@ Le droit des affaires est le droit de l'**activité économique organisée**. So
 
 Orientation : J. Issa-Sayegh et J. Lohoues-Oble, *OHADA. Harmonisation du droit des affaires* ; P.-G. Pougoué (dir.), *Encyclopédie du droit OHADA* ; *OHADA. Traité et actes uniformes commentés et annotés* (Juriscope) ; P. Meyer, *OHADA. Droit de l'arbitrage*.
 
-**État : planifié — prochain tome à rédiger.**
+**État : rédigé (version 1.0, novembre 2026), en vingt chapitres répartis en huit parties.**
 
 # Droit pénal et sciences criminelles {.chapitre num="Tome 7" court="Tome 7 — Droit pénal"}
 
@@ -304,7 +304,7 @@ Le droit pénal est le droit de la **réaction sociale organisée contre les com
 
 Le Tome 7 s'appuie sur le Tome 1 (application de la loi pénale dans le temps et dans l'espace) et le Tome 8 (institutions judiciaires). Orientation : manuels de droit pénal général et de procédure pénale (doctrine française et africaine) ; doctrine ivoirienne relative aux codes de 2018 et 2019 (à recenser).
 
-**État : planifié.**
+**État : planifié — prochain tome à rédiger.**
 
 # Procédures et institutions judiciaires {.chapitre num="Tome 8" court="Tome 8 — Procédures et institutions judiciaires"}
 
