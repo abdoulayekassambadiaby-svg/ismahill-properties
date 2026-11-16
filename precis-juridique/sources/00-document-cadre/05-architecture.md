@@ -191,7 +191,7 @@ Le droit administratif est le droit de l'**action administrative et de son contr
 
 Le Tome 4 suppose le Tome 1 (légalité, hiérarchie des normes) et le Tome 3 (organisation des pouvoirs publics). Il prépare le Tome 8 (procédure administrative contentieuse) et le Tome 11 (domanialité, expropriation). Orientation : R. Chapus, *Droit administratif général* ; J. Waline, *Droit administratif* ; M. Long, P. Weil, G. Braibant, P. Delvolvé et B. Genevois, *Les grands arrêts de la jurisprudence administrative* ; doctrine administrativiste ivoirienne et africaine (à recenser).
 
-**État : planifié — prochain tome à rédiger.**
+**État : rédigé (version 1.0, novembre 2026), en quinze chapitres.**
 
 # Droit civil {.chapitre num="Tome 5" court="Tome 5 — Droit civil"}
 
@@ -236,7 +236,7 @@ Le droit civil est le **droit commun des rapports entre personnes privées**. Il
 
 Le Tome 5 suppose le Tome 1 (droits subjectifs, preuve, application de la loi dans le temps). Il entretient des liens étroits avec les Tomes 6 (sûretés, vente commerciale), 10 (droit international privé de la famille) et 11 (propriété foncière). Orientation : J. Carbonnier, *Droit civil* ; F. Terré, Ph. Simler et Y. Lequette, *Droit civil. Les obligations* ; K. Mbaye (dir.), *Le droit de la famille en Afrique noire et à Madagascar* ; doctrine civiliste ivoirienne (à recenser).
 
-**État : planifié.**
+**État : planifié — prochain tome à rédiger.**
 
 # Droit commercial et droit des affaires OHADA {.chapitre num="Tome 6" court="Tome 6 — Droit des affaires OHADA"}
 
