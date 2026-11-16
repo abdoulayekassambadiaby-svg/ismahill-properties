@@ -228,7 +228,7 @@ Le droit civil est le **droit commun des rapports entre personnes privées**. Il
 
 ## Sources, institutions et problématiques
 
-**Textes de référence.** Code civil (rédaction applicable en Côte d'Ivoire) ; lois du 7 octobre 1964 ; loi n° 2018-862 du 19 novembre 2018 relative à l'état civil ; lois du 26 juin 2019 relatives au mariage (n° 2019-570), à la filiation (n° 2019-571), à la minorité et aux successions (n° 2019-573) ; Acte uniforme portant organisation des sûretés (2010) ; Code CIMA.
+**Textes de référence.** Code civil (rédaction applicable en Côte d'Ivoire) ; lois du 7 octobre 1964 ; loi n° 2018-862 du 19 novembre 2018 relative à l'état civil ; lois du 26 juin 2019 relatives au mariage (n° 2019-570), à la filiation (n° 2019-571), à la minorité (n° 2019-572) et aux successions (n° 2019-573) ; loi n° 2019-987 du 27 novembre 2019 relative à l'adoption ; loi n° 2020-490 du 29 mai 2020 relative au nom ; loi n° 2020-669 du 10 septembre 2020 relative aux libéralités ; loi n° 2022-793 du 13 octobre 2022 relative au divorce et à la séparation de corps ; Acte uniforme portant organisation des sûretés (2010) ; Code CIMA.
 
 **Problématiques structurantes.** La persistance des pratiques coutumières (mariage coutumier, dot, polygamie de fait) face à la loi civile ; l'égalité des époux ; la protection de l'enfant ; l'opportunité d'une recodification civile ivoirienne ; l'harmonisation du droit des contrats dans l'espace OHADA.
 
@@ -236,7 +236,7 @@ Le droit civil est le **droit commun des rapports entre personnes privées**. Il
 
 Le Tome 5 suppose le Tome 1 (droits subjectifs, preuve, application de la loi dans le temps). Il entretient des liens étroits avec les Tomes 6 (sûretés, vente commerciale), 10 (droit international privé de la famille) et 11 (propriété foncière). Orientation : J. Carbonnier, *Droit civil* ; F. Terré, Ph. Simler et Y. Lequette, *Droit civil. Les obligations* ; K. Mbaye (dir.), *Le droit de la famille en Afrique noire et à Madagascar* ; doctrine civiliste ivoirienne (à recenser).
 
-**État : planifié — prochain tome à rédiger.**
+**État : rédigé (version 1.0, novembre 2026), en vingt chapitres répartis en cinq livres.**
 
 # Droit commercial et droit des affaires OHADA {.chapitre num="Tome 6" court="Tome 6 — Droit des affaires OHADA"}
 
@@ -276,7 +276,7 @@ Le droit des affaires est le droit de l'**activité économique organisée**. So
 
 Orientation : J. Issa-Sayegh et J. Lohoues-Oble, *OHADA. Harmonisation du droit des affaires* ; P.-G. Pougoué (dir.), *Encyclopédie du droit OHADA* ; *OHADA. Traité et actes uniformes commentés et annotés* (Juriscope) ; P. Meyer, *OHADA. Droit de l'arbitrage*.
 
-**État : planifié.**
+**État : planifié — prochain tome à rédiger.**
 
 # Droit pénal et sciences criminelles {.chapitre num="Tome 7" court="Tome 7 — Droit pénal"}
 

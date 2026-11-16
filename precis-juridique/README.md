@@ -11,11 +11,14 @@ Collection de précis universitaires — **droit ivoirien, droit OHADA et droit 
 | `pdf/Tome-02_Methodologie-juridique-et-langage-du-juriste.pdf` | Tome 2 — Méthodologie juridique et langage du juriste (15 chapitres) | Version 1.0 |
 | `pdf/Tome-03_Droit-constitutionnel.pdf` | Tome 3 — Droit constitutionnel (17 chapitres) | Version 1.1 |
 | `pdf/Tome-04_Droit-administratif.pdf` | Tome 4 — Droit administratif (15 chapitres) | Version 1.0 |
+| `pdf/Tome-05_Droit-civil.pdf` | Tome 5 — Droit civil (20 chapitres, 5 livres) | Version 1.0 |
 
-Les tomes 5 à 12 sont planifiés dans le document-cadre et seront rédigés progressivement (prochain tome : Tome 5, Droit civil).
+Les tomes 6 à 12 sont planifiés dans le document-cadre et seront rédigés progressivement (prochain tome : Tome 6, Droit commercial et droit des affaires OHADA).
 
 ## Journal des versions
 
+- **Tome 5, version 1.0** — personnes et famille (lois de 2018 à 2022 : état civil, nom, minorité, mariage, divorce, filiation, adoption), biens et régime foncier (immatriculation, ACD, certificat foncier), obligations (Code civil applicable en Côte d'Ivoire, Code CIMA), successions, libéralités et régimes matrimoniaux, contrats spéciaux et sûretés (AUS 2010) ; annexe des réformes et abrogations ; fiche de vérification.
+- **Document-cadre, version 1.1 (mise à jour)** — Tome 5 rédigé ; Tome 6 prochain tome.
 - **Tome 4, version 1.0** — fondements et légalité, organisation administrative, actes, contrats et commande publique, police, service public, biens et agents publics, contentieux administratif (Conseil d'État, recours préalable), responsabilité, contrôles non juridictionnels ; annexe des grands arrêts français et ivoiriens.
 - **Tome 3, version 1.1** — approfondissement des dix-sept chapitres (36 ajouts : analyses, jurisprudences, exercices corrigés), chronologie constitutionnelle en annexe, fiche de vérification complétée.
 - **Tome 3, version 1.0** — théorie de l'État et de la Constitution, régimes politiques, droit constitutionnel ivoirien, droits fondamentaux, droit électoral, internationalisation ; texte consolidé de la Constitution non consulté directement (références recoupées, voir la fiche de vérification).
@@ -37,7 +40,8 @@ precis-juridique/
 │   ├── tome-01/            sources Markdown du Tome 1
 │   ├── tome-02/            sources Markdown du Tome 2
 │   ├── tome-03/            sources Markdown du Tome 3
-│   └── tome-04/            sources Markdown du Tome 4
+│   ├── tome-04/            sources Markdown du Tome 4
+│   └── tome-05/            sources Markdown du Tome 5
 └── pdf/                    volumes composés
 ```
 
