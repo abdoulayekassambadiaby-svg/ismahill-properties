@@ -13,11 +13,14 @@ Collection de précis universitaires — **droit ivoirien, droit OHADA et droit 
 | `pdf/Tome-04_Droit-administratif.pdf` | Tome 4 — Droit administratif (15 chapitres) | Version 1.0 |
 | `pdf/Tome-05_Droit-civil.pdf` | Tome 5 — Droit civil (20 chapitres, 5 livres) | Version 1.0 |
 | `pdf/Tome-06_Droit-des-affaires-OHADA.pdf` | Tome 6 — Droit commercial et droit des affaires OHADA (20 chapitres, 8 parties) | Version 1.0 |
+| `pdf/Tome-07_Droit-penal.pdf` | Tome 7 — Droit pénal et sciences criminelles (20 chapitres, 5 parties) | Version 1.0 |
 
-Les tomes 7 à 12 sont planifiés dans le document-cadre et seront rédigés progressivement (prochain tome : Tome 7, Droit pénal et sciences criminelles).
+Les tomes 8 à 12 sont planifiés dans le document-cadre et seront rédigés progressivement (prochain tome : Tome 8, Procédures et institutions judiciaires).
 
 ## Journal des versions
 
+- **Tome 7, version 1.0** — droit pénal général (légalité, application de la loi pénale, infraction, responsabilité, peines), droit pénal spécial (personnes, biens, probité publique, affaires, cybercriminalité, terrorisme, traite), procédure pénale (CPP de 2018 modifié en 2022), sciences criminelles, mineurs et droit pénitentiaire, CPI et coopération pénale ; annexe des textes pénaux ; fiche de vérification.
+- **Document-cadre (mise à jour)** — Tome 7 rédigé ; Tome 8 prochain tome.
 - **Tome 6, version 1.0** — OHADA et CCJA, droit commercial général (AUDCG 2010), sociétés et GIE (AUSCGIE 2014), coopératives, sûretés de l'entreprise, recouvrement et voies d'exécution (AUPSRVE révisé 2023), procédures collectives (AUPCAP 2015), arbitrage et médiation (2017), droit comptable (AUDCIF 2017), concurrence, consommation, investissements, banque et instruments de paiement ; annexe des actes uniformes ; fiche de vérification.
 - **Document-cadre (mise à jour)** — Tome 6 rédigé ; Tome 7 prochain tome.
 - **Tome 5, version 1.0** — personnes et famille (lois de 2018 à 2022 : état civil, nom, minorité, mariage, divorce, filiation, adoption), biens et régime foncier (immatriculation, ACD, certificat foncier), obligations (Code civil applicable en Côte d'Ivoire, Code CIMA), successions, libéralités et régimes matrimoniaux, contrats spéciaux et sûretés (AUS 2010) ; annexe des réformes et abrogations ; fiche de vérification.
@@ -45,7 +48,8 @@ precis-juridique/
 │   ├── tome-03/            sources Markdown du Tome 3
 │   ├── tome-04/            sources Markdown du Tome 4
 │   ├── tome-05/            sources Markdown du Tome 5
-│   └── tome-06/            sources Markdown du Tome 6
+│   ├── tome-06/            sources Markdown du Tome 6
+│   └── tome-07/            sources Markdown du Tome 7
 └── pdf/                    volumes composés
 ```
 

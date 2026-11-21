@@ -304,7 +304,7 @@ Le droit pénal est le droit de la **réaction sociale organisée contre les com
 
 Le Tome 7 s'appuie sur le Tome 1 (application de la loi pénale dans le temps et dans l'espace) et le Tome 8 (institutions judiciaires). Orientation : manuels de droit pénal général et de procédure pénale (doctrine française et africaine) ; doctrine ivoirienne relative aux codes de 2018 et 2019 (à recenser).
 
-**État : planifié — prochain tome à rédiger.**
+**État : rédigé (version 1.0, novembre 2026), en vingt chapitres répartis en cinq parties.**
 
 # Procédures et institutions judiciaires {.chapitre num="Tome 8" court="Tome 8 — Procédures et institutions judiciaires"}
 
@@ -334,7 +334,7 @@ Le Tome 8 étudie la **réalisation juridictionnelle du droit** : qui juge, selo
 
 Orientation : manuels de procédure civile et de droit judiciaire privé ; doctrine relative à la CCJA et aux juridictions communautaires.
 
-**État : planifié.**
+**État : planifié — prochain tome à rédiger.**
 
 # Droit social {.chapitre num="Tome 9" court="Tome 9 — Droit social"}
 
